@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PITWALL — Calendrier sport auto</title>
+<meta name="description" content="Calendrier unifié F1, WEC, ELMS, GT World Challenge et DTM — horaires FR, classements, résultats, fiches pilotes.">
+<meta name="theme-color" content="#0A0C10">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="PITWALL">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230A0C10'/%3E%3Crect x='6' y='6' width='5' height='5' fill='%23F4F6F8'/%3E%3Crect x='16' y='6' width='5' height='5' fill='%23F4F6F8'/%3E%3Crect x='11' y='11' width='5' height='5' fill='%23F4F6F8'/%3E%3Crect x='21' y='11' width='5' height='5' fill='%23F4F6F8'/%3E%3Crect x='6' y='16' width='5' height='5' fill='%23F4F6F8'/%3E%3Crect x='16' y='16' width='5' height='5' fill='%23F4F6F8'/%3E%3Crect x='4' y='23' width='24' height='3' rx='1.5' fill='%23FF2A33'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0A0C10;--panel:#13161C;--panel-2:#181C24;--elev:#1B2029;--line:#242A34;--line-soft:#1B2029;
+    --text:#F4F6F8;--muted:#98A1AD;--faint:#5E6772;--f1:#FF2A33;--wec:#F5A623;--elms:#4D8DF0;--gtwc:#16C7CE;--dtm:#B15CFF;--wrc:#34C77B;--live:#27D17F;--r:14px}
+  *{box-sizing:border-box;margin:0;padding:0}html{-webkit-text-size-adjust:100%}
+  body{background:var(--bg);color:var(--text);font-family:"Inter",system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;min-height:100vh;
+    background-image:radial-gradient(1100px 600px at 80% -10%,rgba(255,42,51,.06),transparent 60%),radial-gradient(900px 500px at -10% 8%,rgba(22,199,206,.05),transparent 55%),repeating-linear-gradient(115deg,rgba(255,255,255,.012) 0 2px,transparent 2px 9px);background-attachment:fixed}
+  .wrap{max-width:880px;margin:0 auto;padding:0 18px calc(70px + env(safe-area-inset-bottom))}
+  a{color:inherit}
+  header{position:sticky;top:0;z-index:30;backdrop-filter:saturate(140%) blur(12px);background:rgba(10,12,16,.82);border-bottom:1px solid var(--line-soft)}
+  .bar{max-width:880px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:13px 18px 0}
+  .mark{display:flex;align-items:center;gap:9px;font-family:"Saira Condensed";font-weight:700;letter-spacing:.14em;font-size:19px}
+  .mark .flag{display:inline-grid;grid-template-columns:repeat(3,4px);grid-auto-rows:4px;gap:1.5px}
+  .mark .flag i{background:var(--text)}.mark .flag i:nth-child(4n){background:transparent}
+  .mark s{color:var(--f1);text-decoration:none}
+  .live-pill{margin-left:auto;display:inline-flex;align-items:center;gap:7px;font-size:11px;letter-spacing:.12em;font-weight:600;color:var(--muted);border:1px solid var(--line);padding:6px 11px;border-radius:999px;text-transform:uppercase}
+  .live-pill .dot{width:7px;height:7px;border-radius:50%;background:var(--faint)}
+  .live-pill.on{color:var(--live);border-color:rgba(39,209,127,.4)}.live-pill.on .dot{background:var(--live);animation:pulse 1.8s infinite}
+  nav.tabs{max-width:880px;margin:0 auto;display:flex;gap:4px;padding:10px 12px 0;overflow-x:auto;scrollbar-width:none}
+  nav.tabs::-webkit-scrollbar{display:none}
+  .tab{font-family:"Saira Condensed";font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:15px;color:var(--muted);background:none;border:0;border-bottom:2px solid transparent;padding:10px 12px 12px;cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:7px}
+  .tab .n{font-family:"Inter";font-size:10px;font-weight:600;background:var(--line);color:var(--muted);border-radius:999px;padding:1px 6px;letter-spacing:0}
+  .tab[aria-selected="true"]{color:var(--text);border-color:var(--f1)}.tab[aria-selected="true"] .n{background:var(--f1);color:#0a0c10}
+  .tab:focus-visible{outline:2px solid var(--text);outline-offset:-4px}
+  .panel{display:none}.panel.show{display:block;animation:fade .4s both}
+  .eyebrow{font-family:"Saira Condensed";font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:13px;color:var(--faint);display:flex;align-items:center;gap:12px;margin:28px 2px 14px}
+  .eyebrow::after{content:"";flex:1;height:1px;background:var(--line-soft)}.eyebrow.act::after{content:none}
+  .eyebrow .mini{font-family:"Inter";font-size:11px;letter-spacing:.02em;text-transform:none;color:var(--faint)}
+  .hero{position:relative;border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(180deg,var(--panel-2),var(--panel));overflow:hidden;margin-top:20px;cursor:pointer}
+  .hero .strip{height:4px;background:var(--c,var(--f1));position:relative;overflow:hidden}
+  .hero .strip::after{content:"";position:absolute;inset:0;width:34%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.85),transparent);animation:sweep 3.4s linear infinite}
+  .hero .pad{padding:22px 22px 24px}.hero .top{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+  .tag{font-family:"Saira Condensed";font-weight:700;letter-spacing:.1em;font-size:12px;text-transform:uppercase;padding:5px 10px;border-radius:6px;color:#08090c;background:var(--c,var(--f1))}
+  .tag.ghost{background:transparent;color:var(--c,var(--f1));border:1px solid var(--c,var(--f1))}
+  .hero h1{font-family:"Saira Condensed";font-weight:700;font-size:clamp(30px,7vw,46px);line-height:.98;text-transform:uppercase;margin:2px 0 8px}
+  .hero .where{color:var(--muted);font-size:15px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}.hero .where .fl{font-size:18px}.hero .when{color:var(--text);font-weight:500;margin-top:3px}
+  .count{display:flex;gap:10px;margin-top:20px}
+  .count .u{flex:1;max-width:96px;background:rgba(0,0,0,.28);border:1px solid var(--line-soft);border-radius:10px;padding:11px 4px 8px;text-align:center}
+  .count .nn{font-family:"Chakra Petch";font-weight:700;font-size:clamp(26px,7vw,38px);line-height:1;font-variant-numeric:tabular-nums}
+  .count .l{font-size:10px;letter-spacing:.18em;color:var(--faint);text-transform:uppercase;margin-top:6px}
+  .hero.islive .count{display:none}
+  .nowtag{display:none;align-items:center;gap:9px;margin-top:18px;font-family:"Saira Condensed";font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--live);font-size:17px}
+  .hero.islive .nowtag{display:inline-flex}.nowtag .dot{width:9px;height:9px;border-radius:50%;background:var(--live);animation:pulse 1.6s infinite}
+  .taphint{position:absolute;top:14px;right:16px;font-size:11px;color:var(--faint);letter-spacing:.04em}
+  .week{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:12px}
+  .wk{position:relative;border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:15px 15px 15px 18px;overflow:hidden;transition:transform .18s,border-color .18s;cursor:pointer}
+  .wk::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--c)}.wk:hover{transform:translateY(-2px);border-color:var(--c)}
+  .wk .r{display:flex;align-items:center;gap:8px;margin-bottom:7px}
+  .wk .tg{font-family:"Saira Condensed";font-weight:700;font-size:11px;letter-spacing:.1em;color:var(--c);text-transform:uppercase}
+  .wk .st{margin-left:auto;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);font-weight:600}.wk .st.live{color:var(--live)}
+  .wk h3{font-family:"Saira Condensed";font-weight:600;font-size:19px;line-height:1.04;text-transform:uppercase}
+  .wk p{color:var(--muted);font-size:13px;margin-top:5px;display:flex;align-items:center;gap:7px}.wk .d{color:var(--text);font-size:13px;font-weight:500;margin-top:8px}
+  .empty{color:var(--faint);font-size:14px;padding:14px 2px;border:1px dashed var(--line);border-radius:12px}
+  .filt{display:flex;gap:8px;flex-wrap:wrap;margin:2px 0 14px;align-items:center}
+  .chip{font-family:"Saira Condensed";font-weight:600;letter-spacing:.07em;font-size:14px;text-transform:uppercase;color:var(--muted);background:transparent;cursor:pointer;border:1px solid var(--line);border-radius:999px;padding:7px 14px;transition:.15s;display:inline-flex;align-items:center;gap:8px}
+  .chip .b{width:8px;height:8px;border-radius:50%;background:var(--c);opacity:.4;transition:.15s}
+  .chip[aria-pressed="true"]{color:var(--text);border-color:var(--c);background:rgba(255,255,255,.03)}.chip[aria-pressed="true"] .b{opacity:1;box-shadow:0 0 8px var(--c)}
+  .chip.fav[aria-pressed="true"]{color:#FFD24A;border-color:#FFD24A;background:rgba(255,210,74,.08)}
+  .chip:focus-visible{outline:2px solid var(--text);outline-offset:2px}
+  .ics-btn{font-family:"Inter";font-size:12px;font-weight:600;color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:8px;padding:7px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:.15s}
+  .ics-btn:hover{color:var(--text);border-color:var(--muted)}
+  .month{font-family:"Saira Condensed";font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--faint);margin:22px 2px 10px;display:flex;align-items:center;gap:10px}
+  .month .busy{font-family:"Inter";font-size:10px;font-weight:600;letter-spacing:.04em;text-transform:none;color:#FFB454;border:1px solid rgba(255,180,84,.35);border-radius:999px;padding:1px 8px}
+  .row{position:relative;display:grid;grid-template-columns:52px 1fr auto;gap:14px;align-items:center;border:1px solid var(--line-soft);border-radius:12px;background:var(--panel);padding:12px 14px 12px 18px;margin-bottom:9px;transition:transform .16s,border-color .16s;cursor:pointer}
+  .row::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:3px;border-radius:2px;background:var(--c)}.row:hover{transform:translateX(2px);border-color:var(--c)}
+  .row.past{opacity:.55}.row.live{border-color:var(--c);background:linear-gradient(90deg,rgba(255,255,255,.04),var(--panel))}
+  .dt{text-align:center;line-height:1}.dt .dd{font-family:"Saira Condensed";font-weight:700;font-size:23px}.dt .mm{font-size:10px;letter-spacing:.12em;color:var(--faint);text-transform:uppercase;margin-top:3px}.dt .rng{font-size:10px;color:var(--faint);margin-top:2px}
+  .mid .l1{display:flex;align-items:center;gap:8px;margin-bottom:3px;flex-wrap:wrap}
+  .mid .tg{font-family:"Saira Condensed";font-weight:700;font-size:11px;letter-spacing:.08em;color:var(--c);text-transform:uppercase}
+  .mid .rd{font-size:10px;color:var(--faint);letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--line);border-radius:5px;padding:1px 6px}
+  .mid .clash{display:inline-flex;gap:3px;align-items:center;padding:1px 6px;border-radius:5px;border:1px solid rgba(255,180,84,.3);font-size:10px;color:#FFB454}.mid .clash i{width:7px;height:7px;border-radius:50%}
+  .mid h4{font-family:"Saira Condensed";font-weight:600;font-size:18px;line-height:1.05;text-transform:uppercase}
+  .mid .sub{color:var(--muted);font-size:13px;margin-top:3px;display:flex;align-items:center;gap:7px;flex-wrap:wrap}.mid .fl{font-size:15px}
+  .ract{display:flex;flex-direction:column;align-items:flex-end;gap:7px}
+  .stt{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);font-weight:600;white-space:nowrap}
+  .stt .win{color:var(--muted)}.stt .win b{color:var(--text)}.stt .lv{color:var(--live)}.stt .tbc{color:var(--wec)}
+  .acts{display:flex;gap:6px}
+  .ib{width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:transparent;color:var(--faint);cursor:pointer;display:grid;place-items:center;transition:.15s;font-size:14px}
+  .ib:hover{color:var(--text);border-color:var(--muted)}.ib.star.on{color:#FFD24A;border-color:rgba(255,210,74,.5)}
+  .ib svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.7}
+  .lv-card{position:relative;border:1px solid var(--c);border-radius:14px;overflow:hidden;margin-bottom:14px;background:linear-gradient(180deg,rgba(255,255,255,.04),var(--panel))}
+  .lv-card .strip{height:4px;background:var(--c)}.lv-card .pad{padding:18px}
+  .lv-head{display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+  .lv-card h3{font-family:"Saira Condensed";font-weight:700;font-size:24px;text-transform:uppercase;line-height:1}
+  .lv-card .meta{color:var(--muted);font-size:13px;margin-top:4px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .watch{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .wbtn{font-family:"Saira Condensed";font-weight:600;letter-spacing:.05em;text-transform:uppercase;font-size:13px;text-decoration:none;border:1px solid var(--line);border-radius:9px;padding:9px 14px;color:var(--text);display:inline-flex;align-items:center;gap:8px;transition:.15s;background:rgba(255,255,255,.02);cursor:pointer}
+  .wbtn:hover{border-color:var(--c,var(--muted));transform:translateY(-1px)}
+  .wbtn.prime{background:var(--c);color:#0a0c10;border-color:var(--c)}
+  .ondot{width:9px;height:9px;border-radius:50%;background:var(--live);animation:pulse 1.6s infinite;display:inline-block}
+  .grid2{display:grid;grid-template-columns:1fr;gap:18px}@media(min-width:680px){.grid2{grid-template-columns:1fr 1fr}}
+  .stand{border:1px solid var(--line-soft);border-radius:12px;overflow:hidden;background:var(--panel);align-self:start}
+  .stand h3{font-family:"Saira Condensed";font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase;padding:12px 16px;border-bottom:1px solid var(--line-soft);color:var(--muted)}
+  .srow{display:grid;grid-template-columns:26px 1fr auto;gap:10px;align-items:center;padding:9px 16px;border-bottom:1px solid var(--line-soft);font-size:14px}
+  .srow:last-child{border-bottom:0}
+  .srow .pos{font-family:"Saira Condensed";font-weight:700;color:var(--faint);text-align:center}.srow.top .pos{color:var(--text)}
+  .srow .nm{display:flex;align-items:center;gap:9px;min-width:0}.srow .nm .bar{width:3px;height:16px;border-radius:2px;background:var(--c,var(--faint));flex:none}
+  .srow .nm b{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.srow .nm span{color:var(--faint);font-size:12px;white-space:nowrap}
+  .srow .pts{font-family:"Chakra Petch";font-weight:700;font-variant-numeric:tabular-nums}.srow .pts .pdim{color:var(--faint);font-family:"Inter";font-weight:500;font-size:12px}
+  .lastr{border:1px solid var(--line-soft);border-radius:10px;background:rgba(255,255,255,.02);padding:13px 15px;margin-top:16px;font-size:14px;display:flex;align-items:center;gap:10px}
+  .lastr .chk{font-size:17px}.lastr b{font-weight:600}
+  .snote{color:var(--faint);font-size:13px;margin-top:10px;line-height:1.55}
+  .dblinks{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:4px}
+  .teams{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+  .tcard{border:1px solid var(--line-soft);border-radius:12px;background:var(--panel);padding:14px 15px 14px 17px;position:relative;overflow:hidden}
+  .tcard::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--c)}
+  .tcard .tn{display:flex;align-items:baseline;gap:8px;margin-bottom:11px}.tcard .tn h4{font-family:"Saira Condensed";font-weight:700;font-size:18px;text-transform:uppercase}.tcard .tn .ms{color:var(--faint);font-size:12px}
+  .drv{display:flex;align-items:center;gap:11px;padding:7px 0;border-top:1px solid var(--line-soft);cursor:pointer}
+  .drv:first-of-type{border-top:0}.drv:hover .dn{color:var(--c)}
+  .av{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font-family:"Saira Condensed";font-weight:700;font-size:13px;color:#0a0c10;background:var(--c);flex:none}
+  .drv .dn{font-weight:600;font-size:15px;transition:.15s}.drv .df{font-size:16px;margin-left:auto}
+  .gdrow{display:grid;grid-template-columns:30px 1fr auto;gap:11px;align-items:center;border:1px solid var(--line-soft);border-radius:10px;background:var(--panel);padding:10px 14px;margin-bottom:7px;cursor:pointer;transition:.15s}
+  .gdrow:hover{border-color:var(--gtwc);transform:translateX(2px)}
+  .gdrow .gp{font-family:"Saira Condensed";font-weight:700;color:var(--faint);text-align:center}
+  .gdrow .gn{font-weight:600}.gdrow .gn small{color:var(--faint);font-weight:500;margin-left:6px}
+  .gdrow .gpt{font-family:"Chakra Petch";font-weight:700;color:var(--gtwc);font-variant-numeric:tabular-nums}
+  .gdrow .arr{color:var(--faint);font-size:13px}
+  .modal{position:fixed;inset:0;z-index:60;display:none;align-items:flex-end;justify-content:center;background:rgba(5,6,9,.66);backdrop-filter:blur(4px)}
+  .modal.show{display:flex;animation:fade .2s both}
+  .sheet{background:var(--panel-2);border:1px solid var(--line);border-radius:18px 18px 0 0;width:100%;max-width:580px;max-height:90vh;overflow:auto;position:relative}
+  @media(min-width:620px){.modal{align-items:center}.sheet{border-radius:18px}}
+  .sheet .mstrip{height:4px;background:var(--c)}
+  .mclose{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:9px;border:1px solid var(--line);background:rgba(0,0,0,.3);color:var(--muted);cursor:pointer;font-size:18px;z-index:2}
+  .mpad{padding:20px 20px 26px}.mhead .t{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+  .mhead h2{font-family:"Saira Condensed";font-weight:700;font-size:clamp(24px,6vw,32px);text-transform:uppercase;line-height:1;margin-bottom:7px}
+  .mhead .ml{color:var(--muted);font-size:14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .modsec{margin-top:22px}
+  .modsec h5{font-family:"Saira Condensed";font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--faint);margin-bottom:11px;display:flex;align-items:center;gap:9px}
+  .modsec h5 .fr{font-family:"Inter";letter-spacing:0;text-transform:none;font-size:11px;color:var(--live);border:1px solid rgba(39,209,127,.35);border-radius:999px;padding:1px 8px}
+  .ses{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line-soft)}
+  .ses:last-child{border-bottom:0}.ses .sn{font-weight:600;font-size:14px}.ses.race .sn{color:var(--c)}
+  .ses .sd{color:var(--faint);font-size:12px;text-transform:capitalize}.ses .stime{font-family:"Chakra Petch";font-weight:700;font-size:17px;font-variant-numeric:tabular-nums}.ses.race .stime{color:var(--c)}
+  .mnote{color:var(--faint);font-size:13px;line-height:1.55;background:rgba(255,255,255,.02);border:1px solid var(--line-soft);border-radius:10px;padding:11px 13px}
+  .resbig{font-family:"Saira Condensed";font-weight:600;font-size:20px;text-transform:uppercase;margin-bottom:9px}
+  .clashchip{display:inline-flex;align-items:center;gap:7px;font-family:"Inter";font-size:13px;color:var(--text);background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:9px;padding:8px 12px;margin:0 7px 7px 0;cursor:pointer;transition:.15s}
+  .clashchip:hover{border-color:var(--c)}.clashchip i{width:8px;height:8px;border-radius:50%;background:var(--c)}
+  .mactions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line-soft);color:var(--faint);font-size:12px;line-height:1.7}footer b{color:var(--muted);font-weight:600}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(39,209,127,.6)}70%{box-shadow:0 0 0 9px rgba(39,209,127,0)}100%{box-shadow:0 0 0 0 rgba(39,209,127,0)}}
+  @keyframes sweep{0%{transform:translateX(-120%)}100%{transform:translateX(360%)}}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+  @media (max-width:560px){.row{grid-template-columns:44px 1fr;gap:11px}.ract{grid-column:1/-1;flex-direction:row;justify-content:space-between;align-items:center;padding-left:55px;margin-top:-2px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <span class="mark"><span class="flag"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>PIT<s>·</s>WALL</span>
+    <span class="live-pill" id="livePill"><span class="dot"></span><span id="livePillTxt">—</span></span>
+  </div>
+  <nav class="tabs" id="tabs">
+    <button class="tab" data-t="cal" aria-selected="true">Calendrier</button>
+    <button class="tab" data-t="live" aria-selected="false">Live <span class="n" id="liveN" style="display:none">0</span></button>
+    <button class="tab" data-t="res" aria-selected="false">Résultats</button>
+    <button class="tab" data-t="drv" aria-selected="false">Pilotes</button>
+  </nav>
+</header>
+
+<div class="wrap">
+  <section class="panel show" id="p-cal">
+    <div id="hero"></div>
+    <div class="eyebrow">Ce week-end</div>
+    <div class="week" id="weekend"></div>
+    <div class="eyebrow">Calendrier 2026 <span class="mini" id="seasonHint"></span></div>
+    <div class="filt" id="filters"></div>
+    <div id="list"></div>
+  </section>
+
+  <section class="panel" id="p-live">
+    <div class="eyebrow act" style="margin-top:24px">À regarder <span class="mini">— diffusions officielles &amp; live timing</span></div>
+    <div id="liveWrap"></div>
+  </section>
+
+  <section class="panel" id="p-res">
+    <div class="eyebrow act" style="margin-top:24px">Classements <span class="mini" id="resHint"></span></div>
+    <div class="filt" id="resFilters"></div>
+    <div id="standings"></div>
+    <div id="lastResult"></div>
+    <div id="recentF1"></div>
+  </section>
+
+  <section class="panel" id="p-drv">
+    <div class="eyebrow" style="margin-top:24px">Bases pilotes officielles</div>
+    <div class="dblinks">
+      <a class="wbtn" href="https://www.gt-world-challenge-europe.com/drivers" target="_blank" rel="noopener">Pilotes GT World (GT3) ↗</a>
+      <a class="wbtn" href="https://ffsagt.gt4series.com/drivers" target="_blank" rel="noopener">Pilotes GT4 France ↗</a>
+      <a class="wbtn" href="https://www.formula1.com/en/drivers" target="_blank" rel="noopener">Pilotes F1 ↗</a>
+    </div>
+    <div class="eyebrow act" style="margin-top:24px">Fiches pilotes</div>
+    <div class="filt" id="drvFilters"></div>
+    <div id="drvWrap"></div>
+  </section>
+
+  <footer>
+    <div><b>PITWALL v5<span id="genStamp"></span></b> — F1 actualisée automatiquement via l'API Jolpica ; WEC, ELMS, GTWC, DTM et WRC à partir de données vérifiées (sources : Formula 1, FIA WEC, ELMS/ACO, SRO/GT World Challenge, ADAC/DTM, WRC). 6 championnats.</div>
+    <div>Les fiches pilotes GT World pointent vers les fiches officielles (photo, bio, palmarès). L'import natif complet des fiches et des résultats détaillés (qualifs, incidents) s'ajoutera au robot, championnat par championnat.</div>
+  </footer>
+</div>
+
+<div class="modal" id="modal"><div class="sheet" id="sheet"></div></div>
+
+<script>
+const SERIES={
+  f1:{label:"F1",full:"Formula 1",color:"var(--f1)",hex:"#FF2A33"},
+  wec:{label:"WEC",full:"FIA World Endurance",color:"var(--wec)",hex:"#F5A623"},
+  elms:{label:"ELMS",full:"European Le Mans Series",color:"var(--elms)",hex:"#4D8DF0"},
+  gtwc:{label:"GTWC",full:"GT World Challenge Europe",color:"var(--gtwc)",hex:"#16C7CE"},
+  dtm:{label:"DTM",full:"Deutsche Tourenwagen Masters",color:"var(--dtm)",hex:"#B15CFF"},
+  wrc:{label:"WRC",full:"World Rally Championship",color:"var(--wrc)",hex:"#34C77B"}
+};
+const WATCH={
+  f1:{stream:"https://f1tv.formula1.com",streamLabel:"F1 TV",tv:"Canal+ (France)",timing:"https://www.formula1.com/en/timing/f1-live"},
+  wec:{stream:"https://www.fiawec.com",streamLabel:"FIA WEC",tv:"24h du Mans : L'Équipe / Eurosport (FR)",timing:"https://www.fiawec.com"},
+  elms:{stream:"https://www.europeanlemansseries.com",streamLabel:"ELMS.com",tv:"YouTube ELMS (gratuit)",timing:"https://www.europeanlemansseries.com"},
+  gtwc:{stream:"https://www.youtube.com/gtworld",streamLabel:"YouTube — gratuit",tv:"GT World (YouTube)",timing:"https://racing.liveresults.swisstiming.com/index.html?profile=sro"},
+  dtm:{stream:"https://www.dtm.com",streamLabel:"DTM.com",tv:"DTM Grid / streaming officiel",timing:"https://www.dtm.com"},
+  wrc:{stream:"https://www.wrc.com",streamLabel:"WRC.com",tv:"WRC+ All Live (officiel)",timing:"https://www.wrc.com"}
+};
+let EVENTS=[
+  {s:"f1",r:"R1",n:"GP d'Australie",c:"Albert Park, Melbourne",co:"Australie",fl:"🇦🇺",a:"2026-03-06",b:"2026-03-08",w:"Russell"},
+  {s:"f1",r:"R2",n:"GP de Chine",c:"Shanghai",co:"Chine",fl:"🇨🇳",a:"2026-03-13",b:"2026-03-15",w:"Antonelli"},
+  {s:"f1",r:"R3",n:"GP du Japon",c:"Suzuka",co:"Japon",fl:"🇯🇵",a:"2026-03-27",b:"2026-03-29",w:"Antonelli"},
+  {s:"f1",r:"R4",n:"GP de Miami",c:"Miami Intl Autodrome",co:"États-Unis",fl:"🇺🇸",a:"2026-05-01",b:"2026-05-03",w:"Antonelli"},
+  {s:"f1",r:"R5",n:"GP du Canada",c:"Montréal — Gilles-Villeneuve",co:"Canada",fl:"🇨🇦",a:"2026-05-22",b:"2026-05-24",w:"Antonelli"},
+  {s:"f1",r:"R6",n:"GP de Monaco",c:"Monte-Carlo",co:"Monaco",fl:"🇲🇨",a:"2026-06-05",b:"2026-06-07",w:"Antonelli"},
+  {s:"f1",r:"R7",n:"GP de Barcelone",c:"Barcelona-Catalunya",co:"Espagne",fl:"🇪🇸",a:"2026-06-12",b:"2026-06-14",w:"Hamilton"},
+  {s:"f1",r:"R8",n:"GP d'Autriche",c:"Red Bull Ring, Spielberg",co:"Autriche",fl:"🇦🇹",a:"2026-06-26",b:"2026-06-28",
+    sessions:[{n:"Essais libres 1",t:"2026-06-26T11:30:00Z"},{n:"Essais libres 2",t:"2026-06-26T15:00:00Z"},{n:"Essais libres 3",t:"2026-06-27T10:30:00Z"},{n:"Qualifications",t:"2026-06-27T14:00:00Z"},{n:"Course",t:"2026-06-28T13:00:00Z",race:true}]},
+  {s:"f1",r:"R9",n:"GP de Grande-Bretagne",c:"Silverstone",co:"Royaume-Uni",fl:"🇬🇧",a:"2026-07-03",b:"2026-07-05"},
+  {s:"f1",r:"R10",n:"GP de Belgique",c:"Spa-Francorchamps",co:"Belgique",fl:"🇧🇪",a:"2026-07-17",b:"2026-07-19"},
+  {s:"f1",r:"R11",n:"GP de Hongrie",c:"Hungaroring",co:"Hongrie",fl:"🇭🇺",a:"2026-07-24",b:"2026-07-26"},
+  {s:"f1",r:"R12",n:"GP des Pays-Bas",c:"Zandvoort",co:"Pays-Bas",fl:"🇳🇱",a:"2026-08-21",b:"2026-08-23"},
+  {s:"f1",r:"R13",n:"GP d'Italie",c:"Monza",co:"Italie",fl:"🇮🇹",a:"2026-09-04",b:"2026-09-06"},
+  {s:"f1",r:"R14",n:"GP d'Espagne",c:"Madring, Madrid",co:"Espagne",fl:"🇪🇸",a:"2026-09-11",b:"2026-09-13"},
+  {s:"f1",r:"R15",n:"GP d'Azerbaïdjan",c:"Bakou",co:"Azerbaïdjan",fl:"🇦🇿",a:"2026-09-24",b:"2026-09-26"},
+  {s:"f1",r:"R16",n:"GP de Singapour",c:"Marina Bay",co:"Singapour",fl:"🇸🇬",a:"2026-10-09",b:"2026-10-11"},
+  {s:"f1",r:"R17",n:"GP des États-Unis",c:"COTA, Austin",co:"États-Unis",fl:"🇺🇸",a:"2026-10-23",b:"2026-10-25"},
+  {s:"f1",r:"R18",n:"GP de Mexico",c:"Mexico City",co:"Mexique",fl:"🇲🇽",a:"2026-10-30",b:"2026-11-01"},
+  {s:"f1",r:"R19",n:"GP de São Paulo",c:"Interlagos",co:"Brésil",fl:"🇧🇷",a:"2026-11-06",b:"2026-11-08"},
+  {s:"f1",r:"R20",n:"GP de Las Vegas",c:"Las Vegas Strip",co:"États-Unis",fl:"🇺🇸",a:"2026-11-19",b:"2026-11-21"},
+  {s:"f1",r:"R21",n:"GP du Qatar",c:"Lusail",co:"Qatar",fl:"🇶🇦",a:"2026-11-27",b:"2026-11-29"},
+  {s:"f1",r:"R22",n:"GP d'Abu Dhabi",c:"Yas Marina",co:"Émirats A.U.",fl:"🇦🇪",a:"2026-12-04",b:"2026-12-06"},
+  {s:"wec",n:"6 Heures d'Imola",c:"Imola",co:"Italie",fl:"🇮🇹",f:"6H",a:"2026-04-17",b:"2026-04-19",w:"Ferrari #51"},
+  {s:"wec",n:"6 Heures de Spa",c:"Spa-Francorchamps",co:"Belgique",fl:"🇧🇪",f:"6H",a:"2026-05-07",b:"2026-05-09",w:"BMW #15"},
+  {s:"wec",n:"24 Heures du Mans",c:"Circuit de la Sarthe",co:"France",fl:"🇫🇷",f:"24H",a:"2026-06-13",b:"2026-06-14",w:"Toyota #7"},
+  {s:"wec",n:"6 Heures de São Paulo",c:"Interlagos",co:"Brésil",fl:"🇧🇷",f:"6H",a:"2026-07-10",b:"2026-07-12"},
+  {s:"wec",n:"Lone Star Le Mans",c:"COTA, Austin",co:"États-Unis",fl:"🇺🇸",f:"6H",a:"2026-09-04",b:"2026-09-06"},
+  {s:"wec",n:"6 Heures de Fuji",c:"Fuji Speedway",co:"Japon",fl:"🇯🇵",f:"6H",a:"2026-09-25",b:"2026-09-27"},
+  {s:"wec",n:"Qatar 1812 km",c:"Lusail",co:"Qatar",fl:"🇶🇦",f:"~10H",a:"2026-10-20",b:"2026-10-22",tbc:true},
+  {s:"wec",n:"8 Heures de Bahreïn",c:"Sakhir",co:"Bahreïn",fl:"🇧🇭",f:"8H",a:"2026-11-05",b:"2026-11-07"},
+  {s:"elms",r:"R1",n:"4 Heures de Barcelone",c:"Barcelona-Catalunya",co:"Espagne",fl:"🇪🇸",f:"4H",a:"2026-04-10",b:"2026-04-12",w:"Forestier/Panis"},
+  {s:"elms",r:"R2",n:"4 Heures du Castellet",c:"Paul Ricard",co:"France",fl:"🇫🇷",f:"4H",a:"2026-05-01",b:"2026-05-03",w:"United Autosports"},
+  {s:"elms",r:"R3",n:"4 Heures d'Imola",c:"Imola",co:"Italie",fl:"🇮🇹",f:"4H",a:"2026-07-03",b:"2026-07-05"},
+  {s:"elms",r:"R4",n:"4 Heures de Spa",c:"Spa-Francorchamps",co:"Belgique",fl:"🇧🇪",f:"4H",a:"2026-08-21",b:"2026-08-23"},
+  {s:"elms",r:"R5",n:"4 Heures de Silverstone",c:"Silverstone",co:"Royaume-Uni",fl:"🇬🇧",f:"4H",a:"2026-09-11",b:"2026-09-13"},
+  {s:"elms",r:"R6",n:"4 Heures de Portimão",c:"Algarve",co:"Portugal",fl:"🇵🇹",f:"4H",a:"2026-10-08",b:"2026-10-10"},
+  {s:"gtwc",r:"R1",n:"Circuit Paul Ricard",c:"Le Castellet",co:"France",fl:"🇫🇷",a:"2026-04-10",b:"2026-04-12",w:"Thiim/Drudi/Sørensen"},
+  {s:"gtwc",r:"R2",n:"Brands Hatch",c:"Brands Hatch",co:"Royaume-Uni",fl:"🇬🇧",a:"2026-05-02",b:"2026-05-03",w:"Auer/Engel"},
+  {s:"gtwc",r:"R3",n:"Monza",c:"Monza",co:"Italie",fl:"🇮🇹",f:"Endurance",a:"2026-05-28",b:"2026-05-31",w:"—"},
+  {s:"gtwc",r:"R4",n:"24 Heures de Spa",c:"Spa-Francorchamps",co:"Belgique",fl:"🇧🇪",f:"Endurance",a:"2026-06-23",b:"2026-06-28"},
+  {s:"gtwc",r:"R5",n:"Misano",c:"Misano",co:"Italie",fl:"🇮🇹",f:"Sprint",a:"2026-07-17",b:"2026-07-19"},
+  {s:"gtwc",r:"R6",n:"Magny-Cours",c:"Magny-Cours",co:"France",fl:"🇫🇷",f:"Sprint",a:"2026-07-31",b:"2026-08-02"},
+  {s:"gtwc",r:"R7",n:"Nürburgring",c:"Nürburgring",co:"Allemagne",fl:"🇩🇪",f:"Endurance",a:"2026-08-28",b:"2026-08-30"},
+  {s:"gtwc",r:"R8",n:"Zandvoort",c:"Zandvoort",co:"Pays-Bas",fl:"🇳🇱",f:"Sprint",a:"2026-09-18",b:"2026-09-20"},
+  {s:"gtwc",r:"R9",n:"Barcelona",c:"Barcelona-Catalunya",co:"Espagne",fl:"🇪🇸",f:"Sprint",a:"2026-10-02",b:"2026-10-04"},
+  {s:"gtwc",r:"R10",n:"Portimão",c:"Algarve",co:"Portugal",fl:"🇵🇹",f:"Endurance",a:"2026-10-16",b:"2026-10-18"},
+  {s:"dtm",r:"R1",n:"Red Bull Ring",c:"Spielberg",co:"Autriche",fl:"🇦🇹",a:"2026-04-24",b:"2026-04-26",w:"—"},
+  {s:"dtm",r:"R2",n:"Zandvoort",c:"Zandvoort",co:"Pays-Bas",fl:"🇳🇱",a:"2026-05-22",b:"2026-05-24",w:"Cairoli"},
+  {s:"dtm",r:"R3",n:"Lausitzring",c:"DEKRA Lausitzring",co:"Allemagne",fl:"🇩🇪",a:"2026-06-19",b:"2026-06-21",w:"Cairoli"},
+  {s:"dtm",r:"R4",n:"Norisring",c:"Norisring",co:"Allemagne",fl:"🇩🇪",a:"2026-07-03",b:"2026-07-05"},
+  {s:"dtm",r:"R5",n:"Oschersleben",c:"Motorsport Arena",co:"Allemagne",fl:"🇩🇪",a:"2026-07-24",b:"2026-07-26"},
+  {s:"dtm",r:"R6",n:"Nürburgring",c:"Nürburgring",co:"Allemagne",fl:"🇩🇪",a:"2026-08-14",b:"2026-08-16"},
+  {s:"dtm",r:"R7",n:"Sachsenring",c:"Sachsenring",co:"Allemagne",fl:"🇩🇪",a:"2026-09-11",b:"2026-09-13"},
+  {s:"dtm",r:"R8",n:"Hockenheimring",c:"Hockenheimring",co:"Allemagne",fl:"🇩🇪",a:"2026-10-09",b:"2026-10-11"},
+  {s:"wrc",r:"R1",n:"Rallye Monte-Carlo",c:"Monte-Carlo",co:"Monaco",fl:"🇲🇨",a:"2026-01-22",b:"2026-01-25",w:"Solberg"},
+  {s:"wrc",r:"R2",n:"Rally de Suède",c:"Umeå",co:"Suède",fl:"🇸🇪",a:"2026-02-12",b:"2026-02-15",w:"Evans"},
+  {s:"wrc",r:"R3",n:"Safari Rally Kenya",c:"Naivasha",co:"Kenya",fl:"🇰🇪",a:"2026-03-12",b:"2026-03-15",w:"Katsuta"},
+  {s:"wrc",r:"R4",n:"Rallye de Croatie",c:"Zagreb",co:"Croatie",fl:"🇭🇷",a:"2026-04-09",b:"2026-04-12"},
+  {s:"wrc",r:"R5",n:"Rally Islas Canarias",c:"Las Palmas",co:"Espagne",fl:"🇪🇸",a:"2026-04-23",b:"2026-04-26",w:"Ogier"},
+  {s:"wrc",r:"R6",n:"Rallye du Portugal",c:"Matosinhos",co:"Portugal",fl:"🇵🇹",a:"2026-05-07",b:"2026-05-10"},
+  {s:"wrc",r:"R7",n:"Rally du Japon",c:"Aichi/Gifu",co:"Japon",fl:"🇯🇵",a:"2026-05-28",b:"2026-05-31",w:"Evans"},
+  {s:"wrc",r:"R8",n:"Acropole — Grèce",c:"Lamia",co:"Grèce",fl:"🇬🇷",a:"2026-06-25",b:"2026-06-28"},
+  {s:"wrc",r:"R9",n:"Rally d'Estonie",c:"Tartu",co:"Estonie",fl:"🇪🇪",a:"2026-07-16",b:"2026-07-19"},
+  {s:"wrc",r:"R10",n:"Rally de Finlande",c:"Jyväskylä",co:"Finlande",fl:"🇫🇮",a:"2026-07-30",b:"2026-08-02"},
+  {s:"wrc",r:"R11",n:"Rally du Paraguay",c:"Encarnación",co:"Paraguay",fl:"🇵🇾",a:"2026-08-27",b:"2026-08-30"},
+  {s:"wrc",r:"R12",n:"Rally du Chili",c:"Biobío",co:"Chili",fl:"🇨🇱",a:"2026-09-10",b:"2026-09-13"},
+  {s:"wrc",r:"R13",n:"Rally d'Italie",c:"Sardaigne",co:"Italie",fl:"🇮🇹",a:"2026-10-01",b:"2026-10-04"},
+  {s:"wrc",r:"R14",n:"Rally d'Arabie Saoudite",c:"Jeddah",co:"Arabie S.",fl:"🇸🇦",a:"2026-11-11",b:"2026-11-14"},
+];
+EVENTS.forEach(e=>e.id=`${e.s}-${e.a}`);
+
+// ---------- CLASSEMENTS (vérifiés, juin 2026) ----------
+let STANDINGS={
+  f1:{round:"après Barcelone · 7/22", last:{r:"GP de Barcelone",w:"Lewis Hamilton (Ferrari)"},
+    tables:[
+      {title:"Pilotes",rows:[
+        {p:1,n:"Antonelli",sub:"Mercedes",pts:156,c:"#00D7B6"},{p:2,n:"Hamilton",sub:"Ferrari",pts:115,c:"#E8002D"},
+        {p:3,n:"Russell",sub:"Mercedes",pts:106,c:"#00D7B6"},{p:4,n:"Leclerc",sub:"Ferrari",pts:75,c:"#E8002D"},
+        {p:5,n:"Norris",sub:"McLaren",pts:73,c:"#FF8000"},{p:6,n:"Piastri",sub:"McLaren",pts:68,c:"#FF8000"},
+        {p:7,n:"Verstappen",sub:"Red Bull",pts:55,c:"#3671C6"},{p:8,n:"Gasly",sub:"Alpine",pts:41,c:"#00A1E8"},
+        {p:9,n:"Hadjar",sub:"Red Bull",pts:34,c:"#3671C6"},{p:10,n:"Lawson",sub:"Racing Bulls",pts:null,c:"#6692FF"}]},
+      {title:"Constructeurs",rows:[
+        {p:1,n:"Mercedes",pts:262,c:"#00D7B6"},{p:2,n:"Ferrari",pts:190,c:"#E8002D"},{p:3,n:"McLaren",pts:141,c:"#FF8000"},
+        {p:4,n:"Red Bull Racing",pts:89,c:"#3671C6"},{p:5,n:"Alpine",pts:60,c:"#00A1E8"},{p:6,n:"Racing Bulls",pts:38,c:"#6692FF"},
+        {p:7,n:"Haas",pts:null,c:"#9CA3AF"},{p:8,n:"Williams",pts:null,c:"#37BEDD"},{p:9,n:"Audi",pts:null,c:"#B0B4B8"},
+        {p:10,n:"Aston Martin",pts:null,c:"#229971"},{p:11,n:"Cadillac",pts:null,c:"#C7A14E"}]}
+    ]},
+  wec:{round:"après Le Mans · 3/8", last:{r:"24 Heures du Mans",w:"Toyota #7 — Kobayashi / Conway / de Vries"},
+    note:"Constructeurs Hypercar : Toyota en tête devant BMW et Ferrari (Alpine, Cadillac et Aston Martin groupés derrière).",
+    tables:[
+      {title:"Hypercar — Pilotes",rows:[
+        {p:1,n:"Kobayashi / Conway / de Vries",sub:"Toyota #7",pts:75},{p:2,n:"Rast / Frijns",sub:"BMW",pts:71},
+        {p:3,n:"van der Linde",sub:"BMW",pts:61},{p:4,n:"Hartley / Hirakawa / Buemi",sub:"Toyota #8",pts:56},
+        {p:5,n:"Pier Guidi / Giovinazzi / Calado",sub:"Ferrari",pts:39},{p:6,n:"Félix da Costa / Milesi / Habsburg",sub:"Alpine",pts:28},
+        {p:7,n:"Delétraz / Nato / Stevens",sub:"Cadillac",pts:26},{p:8,n:"Magnussen / Marciello",sub:"BMW",pts:25}]},
+      {title:"LMGT3 — Pilotes",rows:[
+        {p:1,n:"Edgar / Catsburg",sub:"TF Sport · Corvette",pts:72},{p:2,n:"Keating",sub:"Corvette",pts:50},
+        {p:3,n:"Rovera / Hériau / Mann",sub:"AF Corse · Ferrari",pts:40},{p:4,n:"David / van Rompuy",sub:"TF · Corvette",pts:37},
+        {p:5,n:"Hawksworth",sub:"Lexus",pts:36}]}
+    ]},
+  elms:{round:"après Le Castellet · 2/6", last:{r:"4 H du Castellet",w:"United Autosports #22 (di Resta / Lindh / Goldburg)"},
+    note:"Pilotes LMP2 #22 : Paul di Resta, Rasmus Lindh, Dan Goldburg. Catégories : LMP2, LMP3, LMGT3.",
+    tables:[
+      {title:"LMP2 — Équipes",rows:[
+        {p:1,n:"United Autosports",sub:"#22",pts:40},{p:2,n:"Inter Europol Competition",sub:"#34",pts:37},
+        {p:3,n:"Forestier Racing by Panis",sub:"#29",pts:26}]}
+    ]},
+  gtwc:{round:"après Brands Hatch · Spa en cours", last:{r:"Circuit Paul Ricard",w:"Thiim / Drudi / Sørensen (Aston Martin)"},
+    note:"Classement général pilotes (overall). Spa, en cours ce week-end, n'est pas encore comptabilisé.",
+    tables:[
+      {title:"Pilotes (général)",rows:[
+        {p:1,n:"Auer / Engel",sub:"Mercedes-AMG",pts:57},{p:2,n:"Stolz",sub:"Mercedes-AMG",pts:43},
+        {p:3,n:"Thiim",sub:"Aston Martin",pts:34},{p:4,n:"Sørensen / Drudi",sub:"Aston Martin",pts:33},
+        {p:5,n:"K. van der Linde / Weerts",sub:"BMW",pts:29},{p:6,n:"Pepper",sub:"Lamborghini",pts:25.5},
+        {p:7,n:"Levi / Mazzola / Øgaard",sub:"Porsche",pts:25},{p:8,n:"Schuring / Boccolacci",sub:"Porsche",pts:24},
+        {p:9,n:"Fleming / Prette",sub:"Ferrari",pts:21},{p:10,n:"Goethe",sub:"McLaren",pts:19}]}
+    ]},
+  dtm:{round:"après le Lausitzring · 3/8", last:{r:"Lausitzring (course 2)",w:"Matteo Cairoli (Ferrari)"},
+    note:"Équipes : Schubert Motorsport en tête (119), devant Emil Frey et Winward. Constructeurs : Mercedes-AMG en tête.",
+    tables:[
+      {title:"Pilotes",rows:[
+        {p:1,n:"Cairoli",sub:"Emil Frey · Ferrari",pts:78},{p:2,n:"Engel",sub:"Winward · Mercedes",pts:77},
+        {p:3,n:"Auer",sub:"Landgraf · Mercedes",pts:77},{p:4,n:"Wittmann",sub:"Schubert · BMW",pts:71},
+        {p:5,n:"Dörr",sub:"Dörr · McLaren",pts:67},{p:6,n:"Thiim",sub:"Comtoyou · Aston Martin",pts:61}]}
+    ]},
+  wrc:{round:"après le Japon · 7/14", last:{r:"Rally du Japon",w:"Elfyn Evans (Toyota)"},
+    note:"Elfyn Evans en tête, +20 pts sur Katsuta ; Solberg 3e. Constructeurs : Toyota +93 sur Hyundai.",
+    tables:[{title:"Pilotes",rows:[
+      {p:1,n:"Elfyn Evans",sub:"Toyota",pts:null},{p:2,n:"Takamoto Katsuta",sub:"Toyota",pts:null},{p:3,n:"Oliver Solberg",sub:"Toyota",pts:null}]}]}
+};
+// GT World drivers → fiches officielles (id + slug réels)
+let GTWC_DRIVERS=[
+  {pos:1,n:"Lucas Auer",pts:57,id:4102,slug:"lucas-auer"},{pos:1,n:"Maro Engel",pts:57,id:4145,slug:"maro-engel"},
+  {pos:2,n:"Luca Stolz",pts:43,id:4146,slug:"luca-stolz"},{pos:3,n:"Nicki Thiim",pts:34,id:4057,slug:"nicki-thiim"},
+  {pos:4,n:"Marco Sørensen",pts:33,id:4156,slug:"marco-sorensen"},{pos:4,n:"Mattia Drudi",pts:33,id:4155,slug:"mattia-drudi"},
+  {pos:5,n:"Kelvin van der Linde",pts:29,id:4107,slug:"kelvin-van-der-linde"},{pos:5,n:"Charles Weerts",pts:29,id:4106,slug:"charles-weerts"},
+  {pos:6,n:"Jordan Pepper",pts:25.5,id:4108,slug:"jordan-pepper"},{pos:7,n:"Sebastian Øgaard",pts:25,id:4084,slug:"sebastian-ogaard"},
+  {pos:8,n:"Morris Schuring",pts:24,id:4053,slug:"morris-schuring"},{pos:9,n:"Thomas Fleming",pts:21,id:4096,slug:"thomas-fleming"},
+  {pos:10,n:"Benjamin Goethe",pts:19,id:4141,slug:"benjamin-goethe"},{pos:11,n:"Raffaele Marciello",pts:19,id:4118,slug:"raffaele-marciello"},
+  {pos:12,n:"Jake Dennis",pts:19,id:4119,slug:"jake-dennis"},{pos:13,n:"Daniel Juncadella",pts:14,id:4163,slug:"dani-juncadella"},
+  {pos:14,n:"Arthur Leclerc",pts:16.5,id:4101,slug:"arthur-leclerc"},{pos:15,n:"Valentino Rossi",pts:7.5,id:4103,slug:"valentino-rossi-"}
+];
+let F1_TEAMS=[
+  {t:"Mercedes",c:"#00D7B6",m:"AMG",d:[["Russell","🇬🇧","Britannique"],["Antonelli","🇮🇹","Italien"]]},
+  {t:"Ferrari",c:"#E8002D",m:"Ferrari",d:[["Leclerc","🇲🇨","Monégasque"],["Hamilton","🇬🇧","Britannique"]]},
+  {t:"McLaren",c:"#FF8000",m:"Mercedes",d:[["Norris","🇬🇧","Britannique"],["Piastri","🇦🇺","Australien"]]},
+  {t:"Red Bull Racing",c:"#3671C6",m:"Red Bull",d:[["Verstappen","🇳🇱","Néerlandais"],["Hadjar","🇫🇷","Français"]]},
+  {t:"Alpine",c:"#00A1E8",m:"Mercedes",d:[["Gasly","🇫🇷","Français"],["Colapinto","🇦🇷","Argentin"]]},
+  {t:"Racing Bulls",c:"#6692FF",m:"Red Bull",d:[["Lawson","🇳🇿","Néo-Zélandais"],["Lindblad","🇬🇧","Britannique"]]},
+  {t:"Haas",c:"#9CA3AF",m:"Ferrari",d:[["Bearman","🇬🇧","Britannique"],["Ocon","🇫🇷","Français"]]},
+  {t:"Williams",c:"#37BEDD",m:"Mercedes",d:[["Sainz","🇪🇸","Espagnol"],["Albon","🇹🇭","Thaïlandais"]]},
+  {t:"Audi",c:"#B0B4B8",m:"Audi",d:[["Hülkenberg","🇩🇪","Allemand"],["Bortoleto","🇧🇷","Brésilien"]]},
+  {t:"Aston Martin",c:"#229971",m:"Honda",d:[["Alonso","🇪🇸","Espagnol"],["Stroll","🇨🇦","Canadien"]]},
+  {t:"Cadillac",c:"#C7A14E",m:"Ferrari",d:[["Pérez","🇲🇽","Mexicain"],["Bottas","🇫🇮","Finlandais"]]}
+];
+
+const MONTHS=["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
+const MS=["JAN","FÉV","MAR","AVR","MAI","JUIN","JUIL","AOÛT","SEP","OCT","NOV","DÉC"];
+const fmtT=new Intl.DateTimeFormat("fr-FR",{timeZone:"Europe/Paris",hour:"2-digit",minute:"2-digit"});
+const fmtD=new Intl.DateTimeFormat("fr-FR",{timeZone:"Europe/Paris",weekday:"long",day:"numeric",month:"short"});
+const active=new Set(Object.keys(SERIES));
+let favOnly=false,resSeries="f1",drvCat="f1";
+const store={get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const favs=new Set(store.get("pw_favs")||[]);
+function d0(s){const[y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d,0,0,0,0)}
+function d1(s){const[y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d,23,59,59,999)}
+function status(e,now){const a=d0(e.a),b=d1(e.b);if(now>b)return"past";if(now>=a&&now<=b)return"live";return"up"}
+function dlabel(e){const a=d0(e.a),b=d0(e.b),sm=a.getMonth()===b.getMonth();
+  if(e.a===e.b)return `${a.getDate()} ${MS[a.getMonth()]}`;if(sm)return `${a.getDate()}–${b.getDate()} ${MS[a.getMonth()]}`;
+  return `${a.getDate()} ${MS[a.getMonth()]} – ${b.getDate()} ${MS[b.getMonth()]}`}
+function overlap(e,f){return e.s!==f.s&&d0(e.a)<=d1(f.b)&&d1(e.b)>=d0(f.a)}
+function byId(id){return EVENTS.find(x=>x.id===id)}
+
+let heroE=null;
+function buildHero(){const now=new Date();heroE=EVENTS.filter(e=>!e.tbc&&d1(e.b)>=now).sort((x,y)=>d0(x.a)-d0(y.a))[0];
+  const el=document.getElementById("hero");if(!heroE){el.innerHTML="";return}
+  const e=heroE,sm=SERIES[e.s],live=status(e,now)==="live";
+  el.innerHTML=`<div class="hero ${live?'islive':''}" style="--c:${sm.color}" data-open="${e.id}"><div class="strip"></div><span class="taphint">détails →</span><div class="pad">
+    <div class="top"><span class="tag">${sm.label}</span>${e.r?`<span class="tag ghost">${e.r}</span>`:''}${e.f?`<span class="tag ghost">${e.f}</span>`:''}
+      <span style="font-family:'Saira Condensed';font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:13px;color:var(--faint)">${live?'En direct':'Prochaine course'}</span></div>
+    <h1>${e.n}</h1><div class="where"><span class="fl">${e.fl}</span> ${e.c} · ${e.co}</div><div class="where when">${dlabel(e)} 2026</div>
+    <div class="nowtag"><span class="dot"></span> Sur la piste maintenant</div>
+    <div class="count"><div class="u"><div class="nn" id="cd">--</div><div class="l">Jours</div></div><div class="u"><div class="nn" id="ch">--</div><div class="l">Heures</div></div>
+      <div class="u"><div class="nn" id="cm">--</div><div class="l">Min</div></div><div class="u"><div class="nn" id="cs">--</div><div class="l">Sec</div></div></div></div></div>`}
+function tick(){if(!heroE)return;const diff=d0(heroE.a)-new Date();if(diff<=0)return;
+  const p=x=>String(x).padStart(2,"0"),s=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v};
+  s("cd",p(Math.floor(diff/864e5)));s("ch",p(Math.floor(diff%864e5/36e5)));s("cm",p(Math.floor(diff%36e5/6e4)));s("cs",p(Math.floor(diff%6e4/1e3)))}
+
+function weekend(now){const d=new Date(now);d.setHours(0,0,0,0);const dy=d.getDay(),fri=new Date(d);
+  if(dy===0)fri.setDate(d.getDate()-2);else if(dy===6)fri.setDate(d.getDate()-1);else fri.setDate(d.getDate()+((5-dy+7)%7));
+  fri.setHours(0,0,0,0);const sun=new Date(fri);sun.setDate(fri.getDate()+2);sun.setHours(23,59,59,999);return{start:fri,end:sun}}
+function inWeekend(e,w){return!e.tbc&&d0(e.a)<=w.end&&d1(e.b)>=w.start}
+function buildWeekend(){const now=new Date(),w=weekend(now);
+  const evs=EVENTS.filter(e=>active.has(e.s)&&inWeekend(e,w)).sort((x,y)=>d0(x.a)-d0(y.a));
+  const el=document.getElementById("weekend");
+  if(!evs.length){el.innerHTML='<div class="empty">Pas de course ce week-end pour les catégories sélectionnées.</div>';return}
+  el.innerHTML=evs.map(e=>{const sm=SERIES[e.s],st=status(e,now),live=st==="live";
+    return `<div class="wk" style="--c:${sm.color}" data-open="${e.id}"><div class="r"><span class="tg">${sm.label}</span>${e.r?`<span class="tg" style="color:var(--faint)">${e.r}</span>`:''}
+      <span class="st ${live?'live':''}">${live?'● En direct':st==='past'?'Terminé':'À venir'}</span></div>
+      <h3>${e.n}</h3><p><span>${e.fl}</span> ${e.c}${e.f?` · ${e.f}`:''}</p><div class="d">${dlabel(e)}</div></div>`}).join("")}
+
+function buildFilters(){const wrap=document.getElementById("filters");
+  wrap.innerHTML=Object.entries(SERIES).map(([k,v])=>`<button class="chip" data-k="${k}" aria-pressed="true" style="--c:${v.color}"><span class="b"></span>${v.label}</button>`).join("")
+    +`<button class="chip fav" id="favChip" aria-pressed="false" style="--c:#FFD24A">★ Favoris</button>`
+    +`<button class="ics-btn" id="icsAll" style="margin-left:auto">＋ Saison .ics</button>`;
+  wrap.querySelectorAll(".chip[data-k]").forEach(c=>c.addEventListener("click",()=>{
+    const k=c.dataset.k,on=c.getAttribute("aria-pressed")==="true";if(on&&active.size===1)return;
+    if(on){active.delete(k);c.setAttribute("aria-pressed","false")}else{active.add(k);c.setAttribute("aria-pressed","true")}buildWeekend();buildList()}));
+  document.getElementById("favChip").addEventListener("click",function(){favOnly=!favOnly;this.setAttribute("aria-pressed",favOnly);buildList()});
+  document.getElementById("icsAll").addEventListener("click",()=>downloadICS(EVENTS.filter(e=>active.has(e.s)&&!e.tbc),"pitwall-saison-2026.ics"))}
+
+function buildList(){const now=new Date();let evs=EVENTS.filter(e=>active.has(e.s));
+  if(favOnly)evs=evs.filter(e=>favs.has(e.id));evs.sort((x,y)=>d0(x.a)-d0(y.a)||(x.tbc?1:-1));
+  const list=document.getElementById("list");
+  if(!evs.length){list.innerHTML='<div class="empty">Aucune course. Ajoute des favoris avec l\'étoile, ou réactive une catégorie.</div>';return}
+  const monthCount={};EVENTS.forEach(e=>{if(e.tbc)return;const m=d0(e.a).getMonth();(monthCount[m]=monthCount[m]||new Set()).add(e.s)});
+  let html="",cur=-1;
+  evs.forEach(e=>{const sm=SERIES[e.s],st=e.tbc?"tbc":status(e,now),a=d0(e.a),mk=a.getMonth();
+    if(mk!==cur){cur=mk;const busy=monthCount[mk]&&monthCount[mk].size>=3;html+=`<div class="month">${MONTHS[mk]}${busy?'<span class="busy">Mois chargé · '+monthCount[mk].size+' séries</span>':''}</div>`}
+    let right="";if(e.tbc)right=`<span class="tbc">Reportée · à confirmer</span>`;
+    else if(st==="live")right=`<span class="lv">● En direct</span>`;else if(st==="past")right=(e.w&&e.w!=="—")?`<span class="win">Vainqueur · <b>${e.w}</b></span>`:`Terminé`;else right=`À venir`;
+    const cls=e.tbc?"":st==="past"?"past":st==="live"?"live":"";
+    const cl=[...new Set(EVENTS.filter(f=>!f.tbc&&overlap(e,f)).map(f=>f.s))];
+    const clHtml=cl.length?`<span class="clash" title="Même week-end : ${cl.map(s=>SERIES[s].label).join(', ')}">⚠ ${cl.map(s=>`<i style="background:${SERIES[s].hex}"></i>`).join("")}</span>`:"";
+    const isFav=favs.has(e.id);
+    html+=`<div class="row ${cls}" style="--c:${sm.color}" data-open="${e.id}"><div class="dt"><div class="dd">${a.getDate()}</div><div class="mm">${MS[mk]}</div>${e.a!==e.b?`<div class="rng">→ ${d0(e.b).getDate()}</div>`:''}</div>
+      <div class="mid"><div class="l1"><span class="tg">${sm.label}</span>${e.r?`<span class="rd">${e.r}</span>`:''}${e.f?`<span class="rd">${e.f}</span>`:''}${clHtml}</div>
+        <h4>${e.n}</h4><div class="sub"><span class="fl">${e.fl}</span> ${e.c} · ${e.co}</div></div>
+      <div class="ract"><span class="stt">${right}</span><div class="acts">
+        <button class="ib star ${isFav?'on':''}" data-fav="${e.id}" title="Favori">${isFav?'★':'☆'}</button>
+        ${e.tbc?'':`<button class="ib ics" data-ics="${e.id}" title="Agenda"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4M12 13v4M10 15h4"/></svg></button>`}
+      </div></div></div>`});
+  list.innerHTML=html}
+
+function icsDate(s,add){const d=d0(s);if(add)d.setDate(d.getDate()+add);return `${d.getFullYear()}${String(d.getMonth()+1).padStart(2,"0")}${String(d.getDate()).padStart(2,"0")}`}
+function downloadICS(evs,fname){let out="BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//PITWALL//FR\r\nCALSCALE:GREGORIAN\r\n";
+  evs.forEach(e=>{const sm=SERIES[e.s];out+="BEGIN:VEVENT\r\n"+`UID:${e.id}@pitwall\r\n`+`DTSTAMP:${icsDate(e.a)}T000000Z\r\n`+`DTSTART;VALUE=DATE:${icsDate(e.a)}\r\n`+`DTEND;VALUE=DATE:${icsDate(e.b,1)}\r\n`+`SUMMARY:${sm.label} · ${e.n}${e.r?' ('+e.r+')':''}\r\n`+`LOCATION:${e.c}\\, ${e.co}\r\n`+`DESCRIPTION:${sm.full}${e.f?' — '+e.f:''}\r\n`+"END:VEVENT\r\n"});
+  out+="END:VCALENDAR\r\n";const blob=new Blob([out],{type:"text/calendar"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=fname;document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url)}
+
+const modal=document.getElementById("modal"),sheet=document.getElementById("sheet");
+function closeModal(){modal.classList.remove("show")}
+modal.addEventListener("click",e=>{if(e.target===modal)closeModal()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+function openEvent(id){const e=byId(id);if(!e)return;const sm=SERIES[e.s],now=new Date(),st=e.tbc?"tbc":status(e,now),wt=WATCH[e.s];
+  let prog;if(e.sessions){prog=e.sessions.map(s=>{const d=new Date(s.t);return `<div class="ses ${s.race?'race':''}"><span class="sn">${s.n}</span><span class="sd">${fmtD.format(d)}</span><span class="stime">${fmtT.format(d)}</span></div>`}).join("")}
+  else prog=`<div class="mnote">Horaires de séance publiés plus près de l'épreuve. Convertis automatiquement en heure française (comme le GP d'Autriche).</div>`;
+  const cl=EVENTS.filter(f=>!f.tbc&&overlap(e,f));
+  const clHtml=cl.length?cl.map(f=>`<button class="clashchip" style="--c:${SERIES[f.s].color}" data-open="${f.id}"><i></i>${SERIES[f.s].label} · ${f.n}</button>`).join(""):`<div class="mnote">Seule course de son week-end.</div>`;
+  let res="";if(st==="past")res=`<div class="modsec"><h5>Résultat</h5>`+((e.w&&e.w!=="—")?`<div class="resbig" style="--c:${sm.color}">🏁 Vainqueur — <b>${e.w}</b></div>`:'')+`<div class="mnote">Classement complet, temps de qualifications et incidents : alimentés par la mise à jour automatique.</div></div>`;
+  let support="";if(e.s==="gtwc")support=`<div class="modsec"><h5>Autres catégories ce week-end</h5><div class="mnote">Les week-ends GT World accueillent d'autres séries SRO (GT2 European Series, GT4 European Series, Lamborghini Super Trofeo, Porsche Carrera Cup…). Le programme précis sera récupéré automatiquement.</div><div class="mactions"><a class="wbtn" href="https://www.gt-world-challenge-europe.com/calendar" target="_blank" rel="noopener">Programme officiel ↗</a></div></div>`;
+  const isFav=favs.has(e.id);sheet.style.setProperty("--c",sm.color);
+  sheet.innerHTML=`<div class="mstrip"></div><button class="mclose">×</button><div class="mpad">
+    <div class="mhead"><div class="t"><span class="tag">${sm.label}</span>${e.r?`<span class="tag ghost">${e.r}</span>`:''}${e.f?`<span class="tag ghost">${e.f}</span>`:''}${st==="live"?'<span class="tag ghost" style="--c:var(--live);color:var(--live)">● En direct</span>':''}</div>
+      <h2>${e.n}</h2><div class="ml"><span style="font-size:17px">${e.fl}</span> ${e.c} · ${e.co} <span style="color:var(--faint)">· ${dlabel(e)} 2026</span></div></div>
+    <div class="modsec"><h5>Programme <span class="fr">Heure française</span></h5>${prog}</div>${res}
+    <div class="modsec"><h5>Où regarder</h5><div class="watch"><a class="wbtn prime" href="${wt.stream}" target="_blank" rel="noopener">▶ ${wt.streamLabel}</a>${wt.timing?`<a class="wbtn" href="${wt.timing}" target="_blank" rel="noopener">Live timing</a>`:''}</div>${wt.tv?`<div class="mnote" style="margin-top:10px">📺 ${wt.tv}</div>`:''}</div>${support}
+    <div class="modsec"><h5>Conflits ce week-end</h5>${clHtml}</div>
+    <div class="mactions"><button class="wbtn" id="mFav" style="--c:#FFD24A">${isFav?'★ Dans mes favoris':'☆ Ajouter aux favoris'}</button>${e.tbc?'':`<button class="wbtn" id="mIcs">＋ Ajouter à mon agenda</button>`}</div></div>`;
+  sheet.querySelector(".mclose").addEventListener("click",closeModal);
+  const mf=sheet.querySelector("#mFav");if(mf)mf.addEventListener("click",()=>{if(favs.has(e.id))favs.delete(e.id);else favs.add(e.id);store.set("pw_favs",[...favs]);buildList();openEvent(e.id)});
+  const mi=sheet.querySelector("#mIcs");if(mi)mi.addEventListener("click",()=>downloadICS([e],`pitwall-${e.id}.ics`));
+  modal.classList.add("show");sheet.scrollTop=0}
+function openDriver(team,idx){const t=F1_TEAMS.find(x=>x.t===team);if(!t)return;const d=t.d[idx];sheet.style.setProperty("--c",t.c);
+  sheet.innerHTML=`<div class="mstrip"></div><button class="mclose">×</button><div class="mpad"><div class="mhead"><div class="t"><span class="tag" style="background:${t.c}">${t.t}</span><span class="tag ghost" style="--c:${t.c};color:${t.c}">F1 2026</span></div>
+    <h2>${d[0]} <span style="font-size:24px">${d[1]}</span></h2><div class="ml">${d[2]} · ${t.t} · Moteur ${t.m}</div></div>
+    <div class="modsec"><h5>Fiche</h5><div class="mnote">Bio complète (date &amp; lieu de naissance, palmarès, réseaux, photo) sur la fiche officielle. L'import natif sera alimenté par la mise à jour automatique.</div></div>
+    <div class="mactions"><a class="wbtn prime" href="https://www.formula1.com/en/drivers" target="_blank" rel="noopener">Fiche officielle F1 ↗</a></div></div>`;
+  sheet.querySelector(".mclose").addEventListener("click",closeModal);modal.classList.add("show");sheet.scrollTop=0}
+function openGtwc(id){const d=GTWC_DRIVERS.find(x=>x.id===id);if(!d)return;const url=`https://www.gt-world-challenge-europe.com/driver/${d.id}/${d.slug}`;sheet.style.setProperty("--c","var(--gtwc)");
+  sheet.innerHTML=`<div class="mstrip"></div><button class="mclose">×</button><div class="mpad"><div class="mhead"><div class="t"><span class="tag">GTWC</span><span class="tag ghost">GT3 · 2026</span></div>
+    <h2>${d.n}</h2><div class="ml">${d.pos}<sup>e</sup> au général · ${d.pts} pts</div></div>
+    <div class="modsec"><h5>Fiche officielle</h5><div class="mnote">Photo, nationalité, date de naissance, voiture, équipe, palmarès et réseaux sont sur la fiche officielle GT World — déjà lisible automatiquement (le robot pourra l'importer dans l'app).</div></div>
+    <div class="mactions"><a class="wbtn prime" href="${url}" target="_blank" rel="noopener">Voir la fiche GT World ↗</a></div></div>`;
+  sheet.querySelector(".mclose").addEventListener("click",closeModal);modal.classList.add("show");sheet.scrollTop=0}
+
+document.addEventListener("click",e=>{
+  const fav=e.target.closest("[data-fav]");if(fav){const id=fav.dataset.fav;if(favs.has(id))favs.delete(id);else favs.add(id);store.set("pw_favs",[...favs]);buildList();return}
+  const ics=e.target.closest("[data-ics]");if(ics){const ev=byId(ics.dataset.ics);if(ev)downloadICS([ev],`pitwall-${ev.id}.ics`);return}
+  const drv=e.target.closest("[data-drv]");if(drv){openDriver(drv.dataset.drv,+drv.dataset.idx);return}
+  const gd=e.target.closest("[data-gtwc]");if(gd){openGtwc(+gd.dataset.gtwc);return}
+  const op=e.target.closest("[data-open]");if(op){openEvent(op.dataset.open)}});
+
+function buildLive(){const now=new Date(),w=weekend(now);
+  const liveEv=EVENTS.filter(e=>!e.tbc&&status(e,now)==="live").sort((x,y)=>d0(x.a)-d0(y.a));
+  const soon=EVENTS.filter(e=>!e.tbc&&status(e,now)==="up"&&inWeekend(e,w)).sort((x,y)=>d0(x.a)-d0(y.a));
+  const next=EVENTS.filter(e=>!e.tbc&&status(e,now)==="up").sort((x,y)=>d0(x.a)-d0(y.a))[0];
+  const card=(e,isLive)=>{const sm=SERIES[e.s],wt=WATCH[e.s];return `<div class="lv-card" style="--c:${sm.color}"><div class="strip"></div><div class="pad">
+    <div class="lv-head"><span class="tag">${sm.label}</span>${e.r?`<span class="tag ghost">${e.r}</span>`:''}${isLive?'<span style="display:inline-flex;align-items:center;gap:7px;color:var(--live);font-family:Saira Condensed;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:14px"><span class="ondot"></span> En direct</span>':`<span style="color:var(--muted);font-size:13px">${dlabel(e)}</span>`}</div>
+    <h3>${e.n}</h3><div class="meta"><span>${e.fl} ${e.c} · ${e.co}</span>${e.f?`<span>· ${e.f}</span>`:''}${wt.tv?`<span>· 📺 ${wt.tv}</span>`:''}</div>
+    <div class="watch"><a class="wbtn prime" href="${wt.stream}" target="_blank" rel="noopener">▶ ${wt.streamLabel}</a>${wt.timing?`<a class="wbtn" href="${wt.timing}" target="_blank" rel="noopener">Live timing</a>`:''}<button class="wbtn" data-open="${e.id}">Programme &amp; détails</button></div></div></div>`};
+  let html="";
+  if(liveEv.length)html+=`<div style="font-family:Saira Condensed;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--live);margin:4px 2px 12px;display:flex;align-items:center;gap:9px"><span class="ondot"></span> En direct maintenant</div>`+liveEv.map(e=>card(e,true)).join("");
+  if(soon.length)html+=`<div style="font-family:Saira Condensed;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin:22px 2px 12px">Aussi ce week-end</div>`+soon.map(e=>card(e,false)).join("");
+  if(!liveEv.length&&!soon.length&&next)html+=`<div style="font-family:Saira Condensed;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin:4px 2px 12px">Prochaine diffusion</div>`+card(next,false);
+  if(!html)html='<div class="empty">Rien en direct pour le moment.</div>';document.getElementById("liveWrap").innerHTML=html}
+
+function buildResFilters(){document.getElementById("resFilters").innerHTML=Object.entries(SERIES).map(([k,v])=>`<button class="chip" data-res="${k}" aria-pressed="${k===resSeries}" style="--c:${v.color}"><span class="b"></span>${v.label}</button>`).join("");
+  document.querySelectorAll("[data-res]").forEach(c=>c.addEventListener("click",()=>{resSeries=c.dataset.res;buildResFilters();buildStandings()}))}
+function buildStandings(){const S=STANDINGS[resSeries],sm=SERIES[resSeries];document.getElementById("resHint").textContent="— "+S.round;
+  const srow=r=>`<div class="srow ${r.p<=3?'top':''}"><div class="pos">${r.p}</div><div class="nm"><span class="bar" style="--c:${r.c||sm.hex}"></span><b>${r.n}</b>${r.sub?`<span>${r.sub}</span>`:''}</div><div class="pts">${r.pts!=null?r.pts:'<span class="pdim">—</span>'}</div></div>`;
+  document.getElementById("standings").innerHTML=`<div class="grid2">`+S.tables.map(t=>`<div class="stand"><h3>${t.title}</h3>${t.rows.map(srow).join("")}</div>`).join("")+`</div>`+(S.note?`<div class="snote">${S.note}</div>`:"");
+  document.getElementById("lastResult").innerHTML=`<div class="lastr" style="--c:${sm.color}"><span class="chk">🏁</span><div><b>${S.last.r}</b> — Vainqueur : ${S.last.w}</div></div>`;
+  if(resSeries==="f1"){const past=EVENTS.filter(e=>e.s==="f1"&&e.w).slice(-5).reverse();
+    document.getElementById("recentF1").innerHTML=`<div class="eyebrow">Derniers Grands Prix</div>`+past.map(e=>`<div class="row" style="--c:var(--f1)" data-open="${e.id}"><div class="dt"><div class="dd">${d0(e.b).getDate()}</div><div class="mm">${MS[d0(e.b).getMonth()]}</div></div><div class="mid"><div class="l1"><span class="tg">F1</span><span class="rd">${e.r}</span></div><h4>${e.n}</h4><div class="sub"><span class="fl">${e.fl}</span> ${e.c}</div></div><div class="ract"><span class="stt win">Vainqueur · <b>${e.w}</b></span></div></div>`).join("")}
+  else document.getElementById("recentF1").innerHTML=""}
+
+function buildDrvFilters(){document.getElementById("drvFilters").innerHTML=
+  `<button class="chip" data-cat="f1" aria-pressed="${drvCat==='f1'}" style="--c:var(--f1)"><span class="b"></span>F1</button>`+
+  `<button class="chip" data-cat="gtwc" aria-pressed="${drvCat==='gtwc'}" style="--c:var(--gtwc)"><span class="b"></span>GT World</button>`;
+  document.querySelectorAll("[data-cat]").forEach(c=>c.addEventListener("click",()=>{drvCat=c.dataset.cat;buildDrvFilters();buildDrivers()}))}
+function buildDrivers(){const wrap=document.getElementById("drvWrap");
+  if(drvCat==="f1"){wrap.innerHTML=`<div class="teams">`+F1_TEAMS.map(t=>`<div class="tcard" style="--c:${t.c}"><div class="tn"><h4>${t.t}</h4><span class="ms">${t.m}</span></div>${t.d.map((d,i)=>`<div class="drv" data-drv="${t.t}" data-idx="${i}"><span class="av">${d[0].slice(0,3).toUpperCase()}</span><span class="dn">${d[0]}</span><span class="df">${d[1]}</span></div>`).join("")}</div>`).join("")+`</div>`}
+  else{wrap.innerHTML=`<div class="snote" style="margin:0 0 14px">Classement général GT World 2026 — clique un pilote pour ouvrir sa fiche officielle (photo, bio, palmarès, voiture, réseaux).</div>`+
+    GTWC_DRIVERS.map(d=>`<div class="gdrow" data-gtwc="${d.id}"><div class="gp">${d.pos}</div><div class="gn">${d.n}</div><div class="gpt">${d.pts} pts <span class="arr">↗</span></div></div>`).join("")}}
+
+function updatePill(){const now=new Date(),live=EVENTS.filter(e=>!e.tbc&&status(e,now)==="live").length;
+  const w=weekend(now),wk=EVENTS.filter(e=>inWeekend(e,w)).length;
+  const pill=document.getElementById("livePill"),txt=document.getElementById("livePillTxt"),ln=document.getElementById("liveN");
+  if(live){pill.classList.add("on");txt.textContent=`${live} en direct`;ln.style.display="inline-block";ln.textContent=live}else{pill.classList.remove("on");txt.textContent=`${wk} ce week-end`;ln.style.display="none"}}
+document.getElementById("tabs").addEventListener("click",e=>{const b=e.target.closest(".tab");if(!b)return;const t=b.dataset.t;
+  document.querySelectorAll(".tab").forEach(x=>x.setAttribute("aria-selected",x===b));document.querySelectorAll(".panel").forEach(p=>p.classList.toggle("show",p.id===`p-${t}`));
+  if(t==="live")buildLive();window.scrollTo({top:0,behavior:"smooth"})});
+
+function renderAll(){
+  EVENTS.forEach(e=>e.id=`${e.s}-${e.a}`);
+  buildHero();buildWeekend();buildFilters();buildList();buildResFilters();buildStandings();buildDrvFilters();buildDrivers();updatePill();tick();
+  const nb=EVENTS.filter(e=>!e.tbc).length, ns=new Set(EVENTS.map(e=>e.s)).size;
+  document.getElementById("seasonHint").textContent=`— ${nb} courses · ${ns} championnats`;
+}
+// Charge les données du robot (data.json) ; à défaut, garde la graine intégrée → l'app marche toujours.
+async function loadData(){
+  try{
+    const r=await fetch("data.json",{cache:"no-store"});
+    if(r.ok){const j=await r.json();
+      if(Array.isArray(j.events)&&j.events.length)EVENTS=j.events;
+      if(j.standings)STANDINGS=j.standings;
+      if(Array.isArray(j.gtwcDrivers)&&j.gtwcDrivers.length)GTWC_DRIVERS=j.gtwcDrivers;
+      if(Array.isArray(j.f1Teams)&&j.f1Teams.length)F1_TEAMS=j.f1Teams;
+      if(j.generated){const f=document.getElementById("genStamp");if(f)f.textContent=" · données du "+new Date(j.generated).toLocaleDateString("fr-FR");}
+    }
+  }catch(e){/* hors-ligne ou aperçu : on garde la graine */}
+  renderAll();
+}
+loadData();
+setInterval(tick,1000);
+setInterval(()=>{buildHero();buildWeekend();buildList();buildLive();updatePill()},60000);
+setInterval(loadData,1800000); // recharge data.json toutes les 30 min
+</script>
+</body>
+</html>

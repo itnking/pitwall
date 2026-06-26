@@ -1,0 +1,1509 @@
+{
+ "generated": "2026-06-26T18:38:16+00:00",
+ "source": "robot",
+ "events": [
+  {
+   "s": "f1",
+   "n": "GP d'Australie",
+   "c": "Albert Park, Melbourne",
+   "co": "Australie",
+   "fl": "🇦🇺",
+   "a": "2026-03-06",
+   "b": "2026-03-08",
+   "r": "R1",
+   "w": "Russell"
+  },
+  {
+   "s": "f1",
+   "n": "GP de Chine",
+   "c": "Shanghai",
+   "co": "Chine",
+   "fl": "🇨🇳",
+   "a": "2026-03-13",
+   "b": "2026-03-15",
+   "r": "R2",
+   "w": "Antonelli"
+  },
+  {
+   "s": "f1",
+   "n": "GP du Japon",
+   "c": "Suzuka",
+   "co": "Japon",
+   "fl": "🇯🇵",
+   "a": "2026-03-27",
+   "b": "2026-03-29",
+   "r": "R3",
+   "w": "Antonelli"
+  },
+  {
+   "s": "f1",
+   "n": "GP de Miami",
+   "c": "Miami Intl Autodrome",
+   "co": "États-Unis",
+   "fl": "🇺🇸",
+   "a": "2026-05-01",
+   "b": "2026-05-03",
+   "r": "R4",
+   "w": "Antonelli"
+  },
+  {
+   "s": "f1",
+   "n": "GP du Canada",
+   "c": "Montréal — Gilles-Villeneuve",
+   "co": "Canada",
+   "fl": "🇨🇦",
+   "a": "2026-05-22",
+   "b": "2026-05-24",
+   "r": "R5",
+   "w": "Antonelli"
+  },
+  {
+   "s": "f1",
+   "n": "GP de Monaco",
+   "c": "Monte-Carlo",
+   "co": "Monaco",
+   "fl": "🇲🇨",
+   "a": "2026-06-05",
+   "b": "2026-06-07",
+   "r": "R6",
+   "w": "Antonelli"
+  },
+  {
+   "s": "f1",
+   "n": "GP de Barcelone",
+   "c": "Barcelona-Catalunya",
+   "co": "Espagne",
+   "fl": "🇪🇸",
+   "a": "2026-06-12",
+   "b": "2026-06-14",
+   "r": "R7",
+   "w": "Hamilton"
+  },
+  {
+   "s": "f1",
+   "n": "GP d'Autriche",
+   "c": "Red Bull Ring, Spielberg",
+   "co": "Autriche",
+   "fl": "🇦🇹",
+   "a": "2026-06-26",
+   "b": "2026-06-28",
+   "r": "R8",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-06-26T11:30:00Z"
+    },
+    {
+     "n": "Essais libres 2",
+     "t": "2026-06-26T15:00:00Z"
+    },
+    {
+     "n": "Essais libres 3",
+     "t": "2026-06-27T10:30:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-06-27T14:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-06-28T13:00:00Z",
+     "race": true
+    }
+   ]
+  },
+  {
+   "s": "f1",
+   "n": "GP de Grande-Bretagne",
+   "c": "Silverstone",
+   "co": "Royaume-Uni",
+   "fl": "🇬🇧",
+   "a": "2026-07-03",
+   "b": "2026-07-05",
+   "r": "R9"
+  },
+  {
+   "s": "f1",
+   "n": "GP de Belgique",
+   "c": "Spa-Francorchamps",
+   "co": "Belgique",
+   "fl": "🇧🇪",
+   "a": "2026-07-17",
+   "b": "2026-07-19",
+   "r": "R10"
+  },
+  {
+   "s": "f1",
+   "n": "GP de Hongrie",
+   "c": "Hungaroring",
+   "co": "Hongrie",
+   "fl": "🇭🇺",
+   "a": "2026-07-24",
+   "b": "2026-07-26",
+   "r": "R11"
+  },
+  {
+   "s": "f1",
+   "n": "GP des Pays-Bas",
+   "c": "Zandvoort",
+   "co": "Pays-Bas",
+   "fl": "🇳🇱",
+   "a": "2026-08-21",
+   "b": "2026-08-23",
+   "r": "R12"
+  },
+  {
+   "s": "f1",
+   "n": "GP d'Italie",
+   "c": "Monza",
+   "co": "Italie",
+   "fl": "🇮🇹",
+   "a": "2026-09-04",
+   "b": "2026-09-06",
+   "r": "R13"
+  },
+  {
+   "s": "f1",
+   "n": "GP d'Espagne",
+   "c": "Madring, Madrid",
+   "co": "Espagne",
+   "fl": "🇪🇸",
+   "a": "2026-09-11",
+   "b": "2026-09-13",
+   "r": "R14"
+  },
+  {
+   "s": "f1",
+   "n": "GP d'Azerbaïdjan",
+   "c": "Bakou",
+   "co": "Azerbaïdjan",
+   "fl": "🇦🇿",
+   "a": "2026-09-24",
+   "b": "2026-09-26",
+   "r": "R15"
+  },
+  {
+   "s": "f1",
+   "n": "GP de Singapour",
+   "c": "Marina Bay",
+   "co": "Singapour",
+   "fl": "🇸🇬",
+   "a": "2026-10-09",
+   "b": "2026-10-11",
+   "r": "R16"
+  },
+  {
+   "s": "f1",
+   "n": "GP des États-Unis",
+   "c": "COTA, Austin",
+   "co": "États-Unis",
+   "fl": "🇺🇸",
+   "a": "2026-10-23",
+   "b": "2026-10-25",
+   "r": "R17"
+  },
+  {
+   "s": "f1",
+   "n": "GP de Mexico",
+   "c": "Mexico City",
+   "co": "Mexique",
+   "fl": "🇲🇽",
+   "a": "2026-10-30",
+   "b": "2026-11-01",
+   "r": "R18"
+  },
+  {
+   "s": "f1",
+   "n": "GP de São Paulo",
+   "c": "Interlagos",
+   "co": "Brésil",
+   "fl": "🇧🇷",
+   "a": "2026-11-06",
+   "b": "2026-11-08",
+   "r": "R19"
+  },
+  {
+   "s": "f1",
+   "n": "GP de Las Vegas",
+   "c": "Las Vegas Strip",
+   "co": "États-Unis",
+   "fl": "🇺🇸",
+   "a": "2026-11-19",
+   "b": "2026-11-21",
+   "r": "R20"
+  },
+  {
+   "s": "f1",
+   "n": "GP du Qatar",
+   "c": "Lusail",
+   "co": "Qatar",
+   "fl": "🇶🇦",
+   "a": "2026-11-27",
+   "b": "2026-11-29",
+   "r": "R21"
+  },
+  {
+   "s": "f1",
+   "n": "GP d'Abu Dhabi",
+   "c": "Yas Marina",
+   "co": "Émirats A.U.",
+   "fl": "🇦🇪",
+   "a": "2026-12-04",
+   "b": "2026-12-06",
+   "r": "R22"
+  },
+  {
+   "s": "wec",
+   "n": "6 Heures d'Imola",
+   "c": "Imola",
+   "co": "Italie",
+   "fl": "🇮🇹",
+   "a": "2026-04-17",
+   "b": "2026-04-19",
+   "f": "6H",
+   "w": "Ferrari #51"
+  },
+  {
+   "s": "wec",
+   "n": "6 Heures de Spa",
+   "c": "Spa-Francorchamps",
+   "co": "Belgique",
+   "fl": "🇧🇪",
+   "a": "2026-05-07",
+   "b": "2026-05-09",
+   "f": "6H",
+   "w": "BMW #15"
+  },
+  {
+   "s": "wec",
+   "n": "24 Heures du Mans",
+   "c": "Circuit de la Sarthe",
+   "co": "France",
+   "fl": "🇫🇷",
+   "a": "2026-06-13",
+   "b": "2026-06-14",
+   "f": "24H",
+   "w": "Toyota #7"
+  },
+  {
+   "s": "wec",
+   "n": "6 Heures de São Paulo",
+   "c": "Interlagos",
+   "co": "Brésil",
+   "fl": "🇧🇷",
+   "a": "2026-07-10",
+   "b": "2026-07-12",
+   "f": "6H"
+  },
+  {
+   "s": "wec",
+   "n": "Lone Star Le Mans",
+   "c": "COTA, Austin",
+   "co": "États-Unis",
+   "fl": "🇺🇸",
+   "a": "2026-09-04",
+   "b": "2026-09-06",
+   "f": "6H"
+  },
+  {
+   "s": "wec",
+   "n": "6 Heures de Fuji",
+   "c": "Fuji Speedway",
+   "co": "Japon",
+   "fl": "🇯🇵",
+   "a": "2026-09-25",
+   "b": "2026-09-27",
+   "f": "6H"
+  },
+  {
+   "s": "wec",
+   "n": "Qatar 1812 km",
+   "c": "Lusail",
+   "co": "Qatar",
+   "fl": "🇶🇦",
+   "a": "2026-10-20",
+   "b": "2026-10-22",
+   "f": "~10H",
+   "tbc": true
+  },
+  {
+   "s": "wec",
+   "n": "8 Heures de Bahreïn",
+   "c": "Sakhir",
+   "co": "Bahreïn",
+   "fl": "🇧🇭",
+   "a": "2026-11-05",
+   "b": "2026-11-07",
+   "f": "8H"
+  },
+  {
+   "s": "elms",
+   "n": "4 Heures de Barcelone",
+   "c": "Barcelona-Catalunya",
+   "co": "Espagne",
+   "fl": "🇪🇸",
+   "a": "2026-04-10",
+   "b": "2026-04-12",
+   "r": "R1",
+   "f": "4H",
+   "w": "Forestier/Panis"
+  },
+  {
+   "s": "elms",
+   "n": "4 Heures du Castellet",
+   "c": "Paul Ricard",
+   "co": "France",
+   "fl": "🇫🇷",
+   "a": "2026-05-01",
+   "b": "2026-05-03",
+   "r": "R2",
+   "f": "4H",
+   "w": "United Autosports"
+  },
+  {
+   "s": "elms",
+   "n": "4 Heures d'Imola",
+   "c": "Imola",
+   "co": "Italie",
+   "fl": "🇮🇹",
+   "a": "2026-07-03",
+   "b": "2026-07-05",
+   "r": "R3",
+   "f": "4H"
+  },
+  {
+   "s": "elms",
+   "n": "4 Heures de Spa",
+   "c": "Spa-Francorchamps",
+   "co": "Belgique",
+   "fl": "🇧🇪",
+   "a": "2026-08-21",
+   "b": "2026-08-23",
+   "r": "R4",
+   "f": "4H"
+  },
+  {
+   "s": "elms",
+   "n": "4 Heures de Silverstone",
+   "c": "Silverstone",
+   "co": "Royaume-Uni",
+   "fl": "🇬🇧",
+   "a": "2026-09-11",
+   "b": "2026-09-13",
+   "r": "R5",
+   "f": "4H"
+  },
+  {
+   "s": "elms",
+   "n": "4 Heures de Portimão",
+   "c": "Algarve",
+   "co": "Portugal",
+   "fl": "🇵🇹",
+   "a": "2026-10-08",
+   "b": "2026-10-10",
+   "r": "R6",
+   "f": "4H"
+  },
+  {
+   "s": "gtwc",
+   "n": "Circuit Paul Ricard",
+   "c": "Le Castellet",
+   "co": "France",
+   "fl": "🇫🇷",
+   "a": "2026-04-10",
+   "b": "2026-04-12",
+   "r": "R1",
+   "w": "Thiim/Drudi/Sørensen"
+  },
+  {
+   "s": "gtwc",
+   "n": "Brands Hatch",
+   "c": "Brands Hatch",
+   "co": "Royaume-Uni",
+   "fl": "🇬🇧",
+   "a": "2026-05-02",
+   "b": "2026-05-03",
+   "r": "R2",
+   "w": "Auer/Engel"
+  },
+  {
+   "s": "gtwc",
+   "n": "Monza",
+   "c": "Monza",
+   "co": "Italie",
+   "fl": "🇮🇹",
+   "a": "2026-05-28",
+   "b": "2026-05-31",
+   "r": "R3",
+   "f": "Endurance"
+  },
+  {
+   "s": "gtwc",
+   "n": "24 Heures de Spa",
+   "c": "Spa-Francorchamps",
+   "co": "Belgique",
+   "fl": "🇧🇪",
+   "a": "2026-06-23",
+   "b": "2026-06-28",
+   "r": "R4",
+   "f": "Endurance"
+  },
+  {
+   "s": "gtwc",
+   "n": "Misano",
+   "c": "Misano",
+   "co": "Italie",
+   "fl": "🇮🇹",
+   "a": "2026-07-17",
+   "b": "2026-07-19",
+   "r": "R5",
+   "f": "Sprint"
+  },
+  {
+   "s": "gtwc",
+   "n": "Magny-Cours",
+   "c": "Magny-Cours",
+   "co": "France",
+   "fl": "🇫🇷",
+   "a": "2026-07-31",
+   "b": "2026-08-02",
+   "r": "R6",
+   "f": "Sprint"
+  },
+  {
+   "s": "gtwc",
+   "n": "Nürburgring",
+   "c": "Nürburgring",
+   "co": "Allemagne",
+   "fl": "🇩🇪",
+   "a": "2026-08-28",
+   "b": "2026-08-30",
+   "r": "R7",
+   "f": "Endurance"
+  },
+  {
+   "s": "gtwc",
+   "n": "Zandvoort",
+   "c": "Zandvoort",
+   "co": "Pays-Bas",
+   "fl": "🇳🇱",
+   "a": "2026-09-18",
+   "b": "2026-09-20",
+   "r": "R8",
+   "f": "Sprint"
+  },
+  {
+   "s": "gtwc",
+   "n": "Barcelona",
+   "c": "Barcelona-Catalunya",
+   "co": "Espagne",
+   "fl": "🇪🇸",
+   "a": "2026-10-02",
+   "b": "2026-10-04",
+   "r": "R9",
+   "f": "Sprint"
+  },
+  {
+   "s": "gtwc",
+   "n": "Portimão",
+   "c": "Algarve",
+   "co": "Portugal",
+   "fl": "🇵🇹",
+   "a": "2026-10-16",
+   "b": "2026-10-18",
+   "r": "R10",
+   "f": "Endurance"
+  },
+  {
+   "s": "dtm",
+   "n": "Red Bull Ring",
+   "c": "Spielberg",
+   "co": "Autriche",
+   "fl": "🇦🇹",
+   "a": "2026-04-24",
+   "b": "2026-04-26",
+   "r": "R1"
+  },
+  {
+   "s": "dtm",
+   "n": "Zandvoort",
+   "c": "Zandvoort",
+   "co": "Pays-Bas",
+   "fl": "🇳🇱",
+   "a": "2026-05-22",
+   "b": "2026-05-24",
+   "r": "R2",
+   "w": "Cairoli"
+  },
+  {
+   "s": "dtm",
+   "n": "Lausitzring",
+   "c": "DEKRA Lausitzring",
+   "co": "Allemagne",
+   "fl": "🇩🇪",
+   "a": "2026-06-19",
+   "b": "2026-06-21",
+   "r": "R3",
+   "w": "Cairoli"
+  },
+  {
+   "s": "dtm",
+   "n": "Norisring",
+   "c": "Norisring",
+   "co": "Allemagne",
+   "fl": "🇩🇪",
+   "a": "2026-07-03",
+   "b": "2026-07-05",
+   "r": "R4"
+  },
+  {
+   "s": "dtm",
+   "n": "Oschersleben",
+   "c": "Motorsport Arena",
+   "co": "Allemagne",
+   "fl": "🇩🇪",
+   "a": "2026-07-24",
+   "b": "2026-07-26",
+   "r": "R5"
+  },
+  {
+   "s": "dtm",
+   "n": "Nürburgring",
+   "c": "Nürburgring",
+   "co": "Allemagne",
+   "fl": "🇩🇪",
+   "a": "2026-08-14",
+   "b": "2026-08-16",
+   "r": "R6"
+  },
+  {
+   "s": "dtm",
+   "n": "Sachsenring",
+   "c": "Sachsenring",
+   "co": "Allemagne",
+   "fl": "🇩🇪",
+   "a": "2026-09-11",
+   "b": "2026-09-13",
+   "r": "R7"
+  },
+  {
+   "s": "dtm",
+   "n": "Hockenheimring",
+   "c": "Hockenheimring",
+   "co": "Allemagne",
+   "fl": "🇩🇪",
+   "a": "2026-10-09",
+   "b": "2026-10-11",
+   "r": "R8"
+  },
+  {
+   "s": "wrc",
+   "n": "Rallye Monte-Carlo",
+   "c": "Monte-Carlo",
+   "co": "Monaco",
+   "fl": "🇲🇨",
+   "a": "2026-01-22",
+   "b": "2026-01-25",
+   "r": "R1",
+   "w": "Solberg"
+  },
+  {
+   "s": "wrc",
+   "n": "Rally de Suède",
+   "c": "Umeå",
+   "co": "Suède",
+   "fl": "🇸🇪",
+   "a": "2026-02-12",
+   "b": "2026-02-15",
+   "r": "R2",
+   "w": "Evans"
+  },
+  {
+   "s": "wrc",
+   "n": "Safari Rally Kenya",
+   "c": "Naivasha",
+   "co": "Kenya",
+   "fl": "🇰🇪",
+   "a": "2026-03-12",
+   "b": "2026-03-15",
+   "r": "R3",
+   "w": "Katsuta"
+  },
+  {
+   "s": "wrc",
+   "n": "Rallye de Croatie",
+   "c": "Zagreb",
+   "co": "Croatie",
+   "fl": "🇭🇷",
+   "a": "2026-04-09",
+   "b": "2026-04-12",
+   "r": "R4"
+  },
+  {
+   "s": "wrc",
+   "n": "Rally Islas Canarias",
+   "c": "Las Palmas",
+   "co": "Espagne",
+   "fl": "🇪🇸",
+   "a": "2026-04-23",
+   "b": "2026-04-26",
+   "r": "R5",
+   "w": "Ogier"
+  },
+  {
+   "s": "wrc",
+   "n": "Rallye du Portugal",
+   "c": "Matosinhos",
+   "co": "Portugal",
+   "fl": "🇵🇹",
+   "a": "2026-05-07",
+   "b": "2026-05-10",
+   "r": "R6"
+  },
+  {
+   "s": "wrc",
+   "n": "Rally du Japon",
+   "c": "Aichi/Gifu",
+   "co": "Japon",
+   "fl": "🇯🇵",
+   "a": "2026-05-28",
+   "b": "2026-05-31",
+   "r": "R7",
+   "w": "Evans"
+  },
+  {
+   "s": "wrc",
+   "n": "Acropole — Grèce",
+   "c": "Lamia",
+   "co": "Grèce",
+   "fl": "🇬🇷",
+   "a": "2026-06-25",
+   "b": "2026-06-28",
+   "r": "R8"
+  },
+  {
+   "s": "wrc",
+   "n": "Rally d'Estonie",
+   "c": "Tartu",
+   "co": "Estonie",
+   "fl": "🇪🇪",
+   "a": "2026-07-16",
+   "b": "2026-07-19",
+   "r": "R9"
+  },
+  {
+   "s": "wrc",
+   "n": "Rally de Finlande",
+   "c": "Jyväskylä",
+   "co": "Finlande",
+   "fl": "🇫🇮",
+   "a": "2026-07-30",
+   "b": "2026-08-02",
+   "r": "R10"
+  },
+  {
+   "s": "wrc",
+   "n": "Rally du Paraguay",
+   "c": "Encarnación",
+   "co": "Paraguay",
+   "fl": "🇵🇾",
+   "a": "2026-08-27",
+   "b": "2026-08-30",
+   "r": "R11"
+  },
+  {
+   "s": "wrc",
+   "n": "Rally du Chili",
+   "c": "Biobío",
+   "co": "Chili",
+   "fl": "🇨🇱",
+   "a": "2026-09-10",
+   "b": "2026-09-13",
+   "r": "R12"
+  },
+  {
+   "s": "wrc",
+   "n": "Rally d'Italie",
+   "c": "Sardaigne",
+   "co": "Italie",
+   "fl": "🇮🇹",
+   "a": "2026-10-01",
+   "b": "2026-10-04",
+   "r": "R13"
+  },
+  {
+   "s": "wrc",
+   "n": "Rally d'Arabie Saoudite",
+   "c": "Jeddah",
+   "co": "Arabie S.",
+   "fl": "🇸🇦",
+   "a": "2026-11-11",
+   "b": "2026-11-14",
+   "r": "R14"
+  }
+ ],
+ "standings": {
+  "f1": {
+   "round": "après Barcelone · 7/22",
+   "last": {
+    "r": "GP de Barcelone",
+    "w": "Lewis Hamilton (Ferrari)"
+   },
+   "tables": [
+    {
+     "title": "Pilotes",
+     "rows": [
+      {
+       "p": 1,
+       "n": "Antonelli",
+       "sub": "Mercedes",
+       "pts": 156,
+       "c": "#00D7B6"
+      },
+      {
+       "p": 2,
+       "n": "Hamilton",
+       "sub": "Ferrari",
+       "pts": 115,
+       "c": "#E8002D"
+      },
+      {
+       "p": 3,
+       "n": "Russell",
+       "sub": "Mercedes",
+       "pts": 106,
+       "c": "#00D7B6"
+      },
+      {
+       "p": 4,
+       "n": "Leclerc",
+       "sub": "Ferrari",
+       "pts": 75,
+       "c": "#E8002D"
+      },
+      {
+       "p": 5,
+       "n": "Norris",
+       "sub": "McLaren",
+       "pts": 73,
+       "c": "#FF8000"
+      },
+      {
+       "p": 6,
+       "n": "Piastri",
+       "sub": "McLaren",
+       "pts": 68,
+       "c": "#FF8000"
+      },
+      {
+       "p": 7,
+       "n": "Verstappen",
+       "sub": "Red Bull",
+       "pts": 55,
+       "c": "#3671C6"
+      },
+      {
+       "p": 8,
+       "n": "Gasly",
+       "sub": "Alpine",
+       "pts": 41,
+       "c": "#00A1E8"
+      },
+      {
+       "p": 9,
+       "n": "Hadjar",
+       "sub": "Red Bull",
+       "pts": 34,
+       "c": "#3671C6"
+      },
+      {
+       "p": 10,
+       "n": "Lawson",
+       "sub": "Racing Bulls",
+       "pts": null,
+       "c": "#6692FF"
+      }
+     ]
+    },
+    {
+     "title": "Constructeurs",
+     "rows": [
+      {
+       "p": 1,
+       "n": "Mercedes",
+       "pts": 262,
+       "c": "#00D7B6"
+      },
+      {
+       "p": 2,
+       "n": "Ferrari",
+       "pts": 190,
+       "c": "#E8002D"
+      },
+      {
+       "p": 3,
+       "n": "McLaren",
+       "pts": 141,
+       "c": "#FF8000"
+      },
+      {
+       "p": 4,
+       "n": "Red Bull Racing",
+       "pts": 89,
+       "c": "#3671C6"
+      },
+      {
+       "p": 5,
+       "n": "Alpine",
+       "pts": 60,
+       "c": "#00A1E8"
+      },
+      {
+       "p": 6,
+       "n": "Racing Bulls",
+       "pts": 38,
+       "c": "#6692FF"
+      },
+      {
+       "p": 7,
+       "n": "Haas",
+       "pts": null,
+       "c": "#9CA3AF"
+      },
+      {
+       "p": 8,
+       "n": "Williams",
+       "pts": null,
+       "c": "#37BEDD"
+      },
+      {
+       "p": 9,
+       "n": "Audi",
+       "pts": null,
+       "c": "#B0B4B8"
+      },
+      {
+       "p": 10,
+       "n": "Aston Martin",
+       "pts": null,
+       "c": "#229971"
+      },
+      {
+       "p": 11,
+       "n": "Cadillac",
+       "pts": null,
+       "c": "#C7A14E"
+      }
+     ]
+    }
+   ]
+  },
+  "wec": {
+   "round": "après Le Mans · 3/8",
+   "last": {
+    "r": "24 Heures du Mans",
+    "w": "Toyota #7 — Kobayashi / Conway / de Vries"
+   },
+   "note": "Constructeurs Hypercar : Toyota en tête devant BMW et Ferrari (Alpine, Cadillac et Aston Martin groupés derrière).",
+   "tables": [
+    {
+     "title": "Hypercar — Pilotes",
+     "rows": [
+      {
+       "p": 1,
+       "n": "Kobayashi / Conway / de Vries",
+       "sub": "Toyota #7",
+       "pts": 75
+      },
+      {
+       "p": 2,
+       "n": "Rast / Frijns",
+       "sub": "BMW",
+       "pts": 71
+      },
+      {
+       "p": 3,
+       "n": "van der Linde",
+       "sub": "BMW",
+       "pts": 61
+      },
+      {
+       "p": 4,
+       "n": "Hartley / Hirakawa / Buemi",
+       "sub": "Toyota #8",
+       "pts": 56
+      },
+      {
+       "p": 5,
+       "n": "Pier Guidi / Giovinazzi / Calado",
+       "sub": "Ferrari",
+       "pts": 39
+      },
+      {
+       "p": 6,
+       "n": "Félix da Costa / Milesi / Habsburg",
+       "sub": "Alpine",
+       "pts": 28
+      },
+      {
+       "p": 7,
+       "n": "Delétraz / Nato / Stevens",
+       "sub": "Cadillac",
+       "pts": 26
+      },
+      {
+       "p": 8,
+       "n": "Magnussen / Marciello",
+       "sub": "BMW",
+       "pts": 25
+      }
+     ]
+    },
+    {
+     "title": "LMGT3 — Pilotes",
+     "rows": [
+      {
+       "p": 1,
+       "n": "Edgar / Catsburg",
+       "sub": "TF Sport · Corvette",
+       "pts": 72
+      },
+      {
+       "p": 2,
+       "n": "Keating",
+       "sub": "Corvette",
+       "pts": 50
+      },
+      {
+       "p": 3,
+       "n": "Rovera / Hériau / Mann",
+       "sub": "AF Corse · Ferrari",
+       "pts": 40
+      },
+      {
+       "p": 4,
+       "n": "David / van Rompuy",
+       "sub": "TF · Corvette",
+       "pts": 37
+      },
+      {
+       "p": 5,
+       "n": "Hawksworth",
+       "sub": "Lexus",
+       "pts": 36
+      }
+     ]
+    }
+   ]
+  },
+  "elms": {
+   "round": "après Le Castellet · 2/6",
+   "last": {
+    "r": "4 H du Castellet",
+    "w": "United Autosports #22 (di Resta / Lindh / Goldburg)"
+   },
+   "note": "Pilotes LMP2 #22 : Paul di Resta, Rasmus Lindh, Dan Goldburg. Catégories : LMP2, LMP3, LMGT3.",
+   "tables": [
+    {
+     "title": "LMP2 — Équipes",
+     "rows": [
+      {
+       "p": 1,
+       "n": "United Autosports",
+       "sub": "#22",
+       "pts": 40
+      },
+      {
+       "p": 2,
+       "n": "Inter Europol Competition",
+       "sub": "#34",
+       "pts": 37
+      },
+      {
+       "p": 3,
+       "n": "Forestier Racing by Panis",
+       "sub": "#29",
+       "pts": 26
+      }
+     ]
+    }
+   ]
+  },
+  "gtwc": {
+   "round": "après Brands Hatch · Spa en cours",
+   "last": {
+    "r": "Circuit Paul Ricard",
+    "w": "Thiim / Drudi / Sørensen (Aston Martin)"
+   },
+   "note": "Classement général pilotes (overall). Spa, en cours ce week-end, n'est pas encore comptabilisé.",
+   "tables": [
+    {
+     "title": "Pilotes (général)",
+     "rows": [
+      {
+       "p": 1,
+       "n": "Auer / Engel",
+       "sub": "Mercedes-AMG",
+       "pts": 57
+      },
+      {
+       "p": 2,
+       "n": "Stolz",
+       "sub": "Mercedes-AMG",
+       "pts": 43
+      },
+      {
+       "p": 3,
+       "n": "Thiim",
+       "sub": "Aston Martin",
+       "pts": 34
+      },
+      {
+       "p": 4,
+       "n": "Sørensen / Drudi",
+       "sub": "Aston Martin",
+       "pts": 33
+      },
+      {
+       "p": 5,
+       "n": "K. van der Linde / Weerts",
+       "sub": "BMW",
+       "pts": 29
+      },
+      {
+       "p": 6,
+       "n": "Pepper",
+       "sub": "Lamborghini",
+       "pts": 25.5
+      },
+      {
+       "p": 7,
+       "n": "Levi / Mazzola / Øgaard",
+       "sub": "Porsche",
+       "pts": 25
+      },
+      {
+       "p": 8,
+       "n": "Schuring / Boccolacci",
+       "sub": "Porsche",
+       "pts": 24
+      },
+      {
+       "p": 9,
+       "n": "Fleming / Prette",
+       "sub": "Ferrari",
+       "pts": 21
+      },
+      {
+       "p": 10,
+       "n": "Goethe",
+       "sub": "McLaren",
+       "pts": 19
+      }
+     ]
+    }
+   ]
+  },
+  "dtm": {
+   "round": "après le Lausitzring · 3/8",
+   "last": {
+    "r": "Lausitzring (course 2)",
+    "w": "Matteo Cairoli (Ferrari)"
+   },
+   "note": "Équipes : Schubert Motorsport en tête (119), devant Emil Frey et Winward. Constructeurs : Mercedes-AMG en tête.",
+   "tables": [
+    {
+     "title": "Pilotes",
+     "rows": [
+      {
+       "p": 1,
+       "n": "Cairoli",
+       "sub": "Emil Frey · Ferrari",
+       "pts": 78
+      },
+      {
+       "p": 2,
+       "n": "Engel",
+       "sub": "Winward · Mercedes",
+       "pts": 77
+      },
+      {
+       "p": 3,
+       "n": "Auer",
+       "sub": "Landgraf · Mercedes",
+       "pts": 77
+      },
+      {
+       "p": 4,
+       "n": "Wittmann",
+       "sub": "Schubert · BMW",
+       "pts": 71
+      },
+      {
+       "p": 5,
+       "n": "Dörr",
+       "sub": "Dörr · McLaren",
+       "pts": 67
+      },
+      {
+       "p": 6,
+       "n": "Thiim",
+       "sub": "Comtoyou · Aston Martin",
+       "pts": 61
+      }
+     ]
+    }
+   ]
+  },
+  "wrc": {
+   "round": "après le Japon · 7/14",
+   "last": {
+    "r": "Rally du Japon",
+    "w": "Elfyn Evans (Toyota)"
+   },
+   "note": "Elfyn Evans en tête, +20 pts sur Katsuta ; Solberg 3e. Constructeurs : Toyota +93 sur Hyundai.",
+   "tables": [
+    {
+     "title": "Pilotes",
+     "rows": [
+      {
+       "p": 1,
+       "n": "Elfyn Evans",
+       "sub": "Toyota",
+       "pts": null
+      },
+      {
+       "p": 2,
+       "n": "Takamoto Katsuta",
+       "sub": "Toyota",
+       "pts": null
+      },
+      {
+       "p": 3,
+       "n": "Oliver Solberg",
+       "sub": "Toyota",
+       "pts": null
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "gtwcDrivers": [
+  {
+   "pos": 1,
+   "n": "Lucas Auer",
+   "pts": 57,
+   "id": 4102,
+   "slug": "lucas-auer"
+  },
+  {
+   "pos": 1,
+   "n": "Maro Engel",
+   "pts": 57,
+   "id": 4145,
+   "slug": "maro-engel"
+  },
+  {
+   "pos": 2,
+   "n": "Luca Stolz",
+   "pts": 43,
+   "id": 4146,
+   "slug": "luca-stolz"
+  },
+  {
+   "pos": 3,
+   "n": "Nicki Thiim",
+   "pts": 34,
+   "id": 4057,
+   "slug": "nicki-thiim"
+  },
+  {
+   "pos": 4,
+   "n": "Marco Sørensen",
+   "pts": 33,
+   "id": 4156,
+   "slug": "marco-sorensen"
+  },
+  {
+   "pos": 4,
+   "n": "Mattia Drudi",
+   "pts": 33,
+   "id": 4155,
+   "slug": "mattia-drudi"
+  },
+  {
+   "pos": 5,
+   "n": "Kelvin van der Linde",
+   "pts": 29,
+   "id": 4107,
+   "slug": "kelvin-van-der-linde"
+  },
+  {
+   "pos": 5,
+   "n": "Charles Weerts",
+   "pts": 29,
+   "id": 4106,
+   "slug": "charles-weerts"
+  },
+  {
+   "pos": 6,
+   "n": "Jordan Pepper",
+   "pts": 25.5,
+   "id": 4108,
+   "slug": "jordan-pepper"
+  },
+  {
+   "pos": 7,
+   "n": "Sebastian Øgaard",
+   "pts": 25,
+   "id": 4084,
+   "slug": "sebastian-ogaard"
+  },
+  {
+   "pos": 8,
+   "n": "Morris Schuring",
+   "pts": 24,
+   "id": 4053,
+   "slug": "morris-schuring"
+  },
+  {
+   "pos": 9,
+   "n": "Thomas Fleming",
+   "pts": 21,
+   "id": 4096,
+   "slug": "thomas-fleming"
+  },
+  {
+   "pos": 10,
+   "n": "Benjamin Goethe",
+   "pts": 19,
+   "id": 4141,
+   "slug": "benjamin-goethe"
+  },
+  {
+   "pos": 11,
+   "n": "Raffaele Marciello",
+   "pts": 19,
+   "id": 4118,
+   "slug": "raffaele-marciello"
+  },
+  {
+   "pos": 12,
+   "n": "Jake Dennis",
+   "pts": 19,
+   "id": 4119,
+   "slug": "jake-dennis"
+  },
+  {
+   "pos": 13,
+   "n": "Daniel Juncadella",
+   "pts": 14,
+   "id": 4163,
+   "slug": "dani-juncadella"
+  },
+  {
+   "pos": 14,
+   "n": "Arthur Leclerc",
+   "pts": 16.5,
+   "id": 4101,
+   "slug": "arthur-leclerc"
+  },
+  {
+   "pos": 15,
+   "n": "Valentino Rossi",
+   "pts": 7.5,
+   "id": 4103,
+   "slug": "valentino-rossi-"
+  }
+ ],
+ "f1Teams": [
+  {
+   "t": "Mercedes",
+   "c": "#00D7B6",
+   "m": "AMG",
+   "d": [
+    [
+     "Russell",
+     "🇬🇧",
+     "Britannique"
+    ],
+    [
+     "Antonelli",
+     "🇮🇹",
+     "Italien"
+    ]
+   ]
+  },
+  {
+   "t": "Ferrari",
+   "c": "#E8002D",
+   "m": "Ferrari",
+   "d": [
+    [
+     "Leclerc",
+     "🇲🇨",
+     "Monégasque"
+    ],
+    [
+     "Hamilton",
+     "🇬🇧",
+     "Britannique"
+    ]
+   ]
+  },
+  {
+   "t": "McLaren",
+   "c": "#FF8000",
+   "m": "Mercedes",
+   "d": [
+    [
+     "Norris",
+     "🇬🇧",
+     "Britannique"
+    ],
+    [
+     "Piastri",
+     "🇦🇺",
+     "Australien"
+    ]
+   ]
+  },
+  {
+   "t": "Red Bull Racing",
+   "c": "#3671C6",
+   "m": "Red Bull",
+   "d": [
+    [
+     "Verstappen",
+     "🇳🇱",
+     "Néerlandais"
+    ],
+    [
+     "Hadjar",
+     "🇫🇷",
+     "Français"
+    ]
+   ]
+  },
+  {
+   "t": "Alpine",
+   "c": "#00A1E8",
+   "m": "Mercedes",
+   "d": [
+    [
+     "Gasly",
+     "🇫🇷",
+     "Français"
+    ],
+    [
+     "Colapinto",
+     "🇦🇷",
+     "Argentin"
+    ]
+   ]
+  },
+  {
+   "t": "Racing Bulls",
+   "c": "#6692FF",
+   "m": "Red Bull",
+   "d": [
+    [
+     "Lawson",
+     "🇳🇿",
+     "Néo-Zélandais"
+    ],
+    [
+     "Lindblad",
+     "🇬🇧",
+     "Britannique"
+    ]
+   ]
+  },
+  {
+   "t": "Haas",
+   "c": "#9CA3AF",
+   "m": "Ferrari",
+   "d": [
+    [
+     "Bearman",
+     "🇬🇧",
+     "Britannique"
+    ],
+    [
+     "Ocon",
+     "🇫🇷",
+     "Français"
+    ]
+   ]
+  },
+  {
+   "t": "Williams",
+   "c": "#37BEDD",
+   "m": "Mercedes",
+   "d": [
+    [
+     "Sainz",
+     "🇪🇸",
+     "Espagnol"
+    ],
+    [
+     "Albon",
+     "🇹🇭",
+     "Thaïlandais"
+    ]
+   ]
+  },
+  {
+   "t": "Audi",
+   "c": "#B0B4B8",
+   "m": "Audi",
+   "d": [
+    [
+     "Hülkenberg",
+     "🇩🇪",
+     "Allemand"
+    ],
+    [
+     "Bortoleto",
+     "🇧🇷",
+     "Brésilien"
+    ]
+   ]
+  },
+  {
+   "t": "Aston Martin",
+   "c": "#229971",
+   "m": "Honda",
+   "d": [
+    [
+     "Alonso",
+     "🇪🇸",
+     "Espagnol"
+    ],
+    [
+     "Stroll",
+     "🇨🇦",
+     "Canadien"
+    ]
+   ]
+  },
+  {
+   "t": "Cadillac",
+   "c": "#C7A14E",
+   "m": "Ferrari",
+   "d": [
+    [
+     "Pérez",
+     "🇲🇽",
+     "Mexicain"
+    ],
+    [
+     "Bottas",
+     "🇫🇮",
+     "Finlandais"
+    ]
+   ]
+  }
+ ]
+}
