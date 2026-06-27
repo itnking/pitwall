@@ -1,5 +1,5 @@
 {
- "generated": "2026-06-26T18:38:16+00:00",
+ "generated": "2026-06-27T00:11:52+00:00",
  "source": "robot",
  "events": [
   {
@@ -11,7 +11,30 @@
    "a": "2026-03-06",
    "b": "2026-03-08",
    "r": "R1",
-   "w": "Russell"
+   "w": "Russell",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-03-06T01:30:00Z"
+    },
+    {
+     "n": "Essais libres 2",
+     "t": "2026-03-06T05:00:00Z"
+    },
+    {
+     "n": "Essais libres 3",
+     "t": "2026-03-07T01:30:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-03-07T05:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-03-08T04:00:00Z",
+     "race": true
+    }
+   ]
   },
   {
    "s": "f1",
@@ -22,7 +45,30 @@
    "a": "2026-03-13",
    "b": "2026-03-15",
    "r": "R2",
-   "w": "Antonelli"
+   "w": "Antonelli",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-03-13T03:30:00Z"
+    },
+    {
+     "n": "Qualifs Sprint",
+     "t": "2026-03-13T07:30:00Z"
+    },
+    {
+     "n": "Sprint",
+     "t": "2026-03-14T03:00:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-03-14T07:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-03-15T07:00:00Z",
+     "race": true
+    }
+   ]
   },
   {
    "s": "f1",
@@ -33,7 +79,30 @@
    "a": "2026-03-27",
    "b": "2026-03-29",
    "r": "R3",
-   "w": "Antonelli"
+   "w": "Antonelli",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-03-27T02:30:00Z"
+    },
+    {
+     "n": "Essais libres 2",
+     "t": "2026-03-27T06:00:00Z"
+    },
+    {
+     "n": "Essais libres 3",
+     "t": "2026-03-28T02:30:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-03-28T06:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-03-29T05:00:00Z",
+     "race": true
+    }
+   ]
   },
   {
    "s": "f1",
@@ -44,7 +113,30 @@
    "a": "2026-05-01",
    "b": "2026-05-03",
    "r": "R4",
-   "w": "Antonelli"
+   "w": "Antonelli",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-05-01T16:00:00Z"
+    },
+    {
+     "n": "Qualifs Sprint",
+     "t": "2026-05-01T20:30:00Z"
+    },
+    {
+     "n": "Sprint",
+     "t": "2026-05-02T16:00:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-05-02T20:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-05-03T20:00:00Z",
+     "race": true
+    }
+   ]
   },
   {
    "s": "f1",
@@ -55,7 +147,30 @@
    "a": "2026-05-22",
    "b": "2026-05-24",
    "r": "R5",
-   "w": "Antonelli"
+   "w": "Antonelli",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-05-22T16:30:00Z"
+    },
+    {
+     "n": "Qualifs Sprint",
+     "t": "2026-05-22T20:30:00Z"
+    },
+    {
+     "n": "Sprint",
+     "t": "2026-05-23T16:00:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-05-23T20:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-05-24T20:00:00Z",
+     "race": true
+    }
+   ]
   },
   {
    "s": "f1",
@@ -66,7 +181,30 @@
    "a": "2026-06-05",
    "b": "2026-06-07",
    "r": "R6",
-   "w": "Antonelli"
+   "w": "Antonelli",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-06-05T11:30:00Z"
+    },
+    {
+     "n": "Essais libres 2",
+     "t": "2026-06-05T15:00:00Z"
+    },
+    {
+     "n": "Essais libres 3",
+     "t": "2026-06-06T10:30:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-06-06T14:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-06-07T13:00:00Z",
+     "race": true
+    }
+   ]
   },
   {
    "s": "f1",
@@ -77,7 +215,30 @@
    "a": "2026-06-12",
    "b": "2026-06-14",
    "r": "R7",
-   "w": "Hamilton"
+   "w": "Hamilton",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-06-12T11:30:00Z"
+    },
+    {
+     "n": "Essais libres 2",
+     "t": "2026-06-12T15:00:00Z"
+    },
+    {
+     "n": "Essais libres 3",
+     "t": "2026-06-13T10:30:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-06-13T14:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-06-14T13:00:00Z",
+     "race": true
+    }
+   ]
   },
   {
    "s": "f1",
@@ -120,7 +281,30 @@
    "fl": "🇬🇧",
    "a": "2026-07-03",
    "b": "2026-07-05",
-   "r": "R9"
+   "r": "R9",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-07-03T11:30:00Z"
+    },
+    {
+     "n": "Qualifs Sprint",
+     "t": "2026-07-03T15:30:00Z"
+    },
+    {
+     "n": "Sprint",
+     "t": "2026-07-04T11:00:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-07-04T15:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-07-05T14:00:00Z",
+     "race": true
+    }
+   ]
   },
   {
    "s": "f1",
@@ -130,7 +314,30 @@
    "fl": "🇧🇪",
    "a": "2026-07-17",
    "b": "2026-07-19",
-   "r": "R10"
+   "r": "R10",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-07-17T11:30:00Z"
+    },
+    {
+     "n": "Essais libres 2",
+     "t": "2026-07-17T15:00:00Z"
+    },
+    {
+     "n": "Essais libres 3",
+     "t": "2026-07-18T10:30:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-07-18T14:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-07-19T13:00:00Z",
+     "race": true
+    }
+   ]
   },
   {
    "s": "f1",
@@ -140,7 +347,30 @@
    "fl": "🇭🇺",
    "a": "2026-07-24",
    "b": "2026-07-26",
-   "r": "R11"
+   "r": "R11",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-07-24T11:30:00Z"
+    },
+    {
+     "n": "Essais libres 2",
+     "t": "2026-07-24T15:00:00Z"
+    },
+    {
+     "n": "Essais libres 3",
+     "t": "2026-07-25T10:30:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-07-25T14:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-07-26T13:00:00Z",
+     "race": true
+    }
+   ]
   },
   {
    "s": "f1",
@@ -150,7 +380,30 @@
    "fl": "🇳🇱",
    "a": "2026-08-21",
    "b": "2026-08-23",
-   "r": "R12"
+   "r": "R12",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-08-21T10:30:00Z"
+    },
+    {
+     "n": "Qualifs Sprint",
+     "t": "2026-08-21T14:30:00Z"
+    },
+    {
+     "n": "Sprint",
+     "t": "2026-08-22T10:00:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-08-22T14:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-08-23T13:00:00Z",
+     "race": true
+    }
+   ]
   },
   {
    "s": "f1",
@@ -160,7 +413,30 @@
    "fl": "🇮🇹",
    "a": "2026-09-04",
    "b": "2026-09-06",
-   "r": "R13"
+   "r": "R13",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-09-04T10:30:00Z"
+    },
+    {
+     "n": "Essais libres 2",
+     "t": "2026-09-04T14:00:00Z"
+    },
+    {
+     "n": "Essais libres 3",
+     "t": "2026-09-05T10:30:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-09-05T14:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-09-06T13:00:00Z",
+     "race": true
+    }
+   ]
   },
   {
    "s": "f1",
@@ -170,7 +446,30 @@
    "fl": "🇪🇸",
    "a": "2026-09-11",
    "b": "2026-09-13",
-   "r": "R14"
+   "r": "R14",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-09-11T11:30:00Z"
+    },
+    {
+     "n": "Essais libres 2",
+     "t": "2026-09-11T15:00:00Z"
+    },
+    {
+     "n": "Essais libres 3",
+     "t": "2026-09-12T10:30:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-09-12T14:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-09-13T13:00:00Z",
+     "race": true
+    }
+   ]
   },
   {
    "s": "f1",
@@ -180,7 +479,30 @@
    "fl": "🇦🇿",
    "a": "2026-09-24",
    "b": "2026-09-26",
-   "r": "R15"
+   "r": "R15",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-09-24T08:30:00Z"
+    },
+    {
+     "n": "Essais libres 2",
+     "t": "2026-09-24T12:00:00Z"
+    },
+    {
+     "n": "Essais libres 3",
+     "t": "2026-09-25T08:30:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-09-25T12:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-09-26T11:00:00Z",
+     "race": true
+    }
+   ]
   },
   {
    "s": "f1",
@@ -190,7 +512,30 @@
    "fl": "🇸🇬",
    "a": "2026-10-09",
    "b": "2026-10-11",
-   "r": "R16"
+   "r": "R16",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-10-09T08:30:00Z"
+    },
+    {
+     "n": "Qualifs Sprint",
+     "t": "2026-10-09T12:30:00Z"
+    },
+    {
+     "n": "Sprint",
+     "t": "2026-10-10T09:00:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-10-10T13:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-10-11T12:00:00Z",
+     "race": true
+    }
+   ]
   },
   {
    "s": "f1",
@@ -200,7 +545,30 @@
    "fl": "🇺🇸",
    "a": "2026-10-23",
    "b": "2026-10-25",
-   "r": "R17"
+   "r": "R17",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-10-23T17:30:00Z"
+    },
+    {
+     "n": "Essais libres 2",
+     "t": "2026-10-23T21:00:00Z"
+    },
+    {
+     "n": "Essais libres 3",
+     "t": "2026-10-24T17:30:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-10-24T21:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-10-25T20:00:00Z",
+     "race": true
+    }
+   ]
   },
   {
    "s": "f1",
@@ -210,7 +578,30 @@
    "fl": "🇲🇽",
    "a": "2026-10-30",
    "b": "2026-11-01",
-   "r": "R18"
+   "r": "R18",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-10-30T18:30:00Z"
+    },
+    {
+     "n": "Essais libres 2",
+     "t": "2026-10-30T22:00:00Z"
+    },
+    {
+     "n": "Essais libres 3",
+     "t": "2026-10-31T17:30:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-10-31T21:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-11-01T20:00:00Z",
+     "race": true
+    }
+   ]
   },
   {
    "s": "f1",
@@ -220,7 +611,30 @@
    "fl": "🇧🇷",
    "a": "2026-11-06",
    "b": "2026-11-08",
-   "r": "R19"
+   "r": "R19",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-11-06T15:30:00Z"
+    },
+    {
+     "n": "Essais libres 2",
+     "t": "2026-11-06T19:00:00Z"
+    },
+    {
+     "n": "Essais libres 3",
+     "t": "2026-11-07T14:30:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-11-07T18:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-11-08T17:00:00Z",
+     "race": true
+    }
+   ]
   },
   {
    "s": "f1",
@@ -228,9 +642,32 @@
    "c": "Las Vegas Strip",
    "co": "États-Unis",
    "fl": "🇺🇸",
-   "a": "2026-11-19",
-   "b": "2026-11-21",
-   "r": "R20"
+   "a": "2026-11-20",
+   "b": "2026-11-22",
+   "r": "R20",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-11-20T00:30:00Z"
+    },
+    {
+     "n": "Essais libres 2",
+     "t": "2026-11-20T04:00:00Z"
+    },
+    {
+     "n": "Essais libres 3",
+     "t": "2026-11-21T00:30:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-11-21T04:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-11-22T04:00:00Z",
+     "race": true
+    }
+   ]
   },
   {
    "s": "f1",
@@ -240,7 +677,30 @@
    "fl": "🇶🇦",
    "a": "2026-11-27",
    "b": "2026-11-29",
-   "r": "R21"
+   "r": "R21",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-11-27T13:30:00Z"
+    },
+    {
+     "n": "Essais libres 2",
+     "t": "2026-11-27T17:00:00Z"
+    },
+    {
+     "n": "Essais libres 3",
+     "t": "2026-11-28T14:30:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-11-28T18:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-11-29T16:00:00Z",
+     "race": true
+    }
+   ]
   },
   {
    "s": "f1",
@@ -250,7 +710,30 @@
    "fl": "🇦🇪",
    "a": "2026-12-04",
    "b": "2026-12-06",
-   "r": "R22"
+   "r": "R22",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-12-04T09:30:00Z"
+    },
+    {
+     "n": "Essais libres 2",
+     "t": "2026-12-04T13:00:00Z"
+    },
+    {
+     "n": "Essais libres 3",
+     "t": "2026-12-05T10:30:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-12-05T14:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-12-06T13:00:00Z",
+     "race": true
+    }
+   ]
   },
   {
    "s": "wec",
@@ -744,7 +1227,7 @@
  ],
  "standings": {
   "f1": {
-   "round": "après Barcelone · 7/22",
+   "round": "après 7 manches · 7/22",
    "last": {
     "r": "GP de Barcelone",
     "w": "Lewis Hamilton (Ferrari)"
@@ -757,71 +1240,73 @@
        "p": 1,
        "n": "Antonelli",
        "sub": "Mercedes",
-       "pts": 156,
-       "c": "#00D7B6"
+       "pts": 156
       },
       {
        "p": 2,
        "n": "Hamilton",
        "sub": "Ferrari",
-       "pts": 115,
-       "c": "#E8002D"
+       "pts": 115
       },
       {
        "p": 3,
        "n": "Russell",
        "sub": "Mercedes",
-       "pts": 106,
-       "c": "#00D7B6"
+       "pts": 106
       },
       {
        "p": 4,
        "n": "Leclerc",
        "sub": "Ferrari",
-       "pts": 75,
-       "c": "#E8002D"
+       "pts": 75
       },
       {
        "p": 5,
        "n": "Norris",
        "sub": "McLaren",
-       "pts": 73,
-       "c": "#FF8000"
+       "pts": 73
       },
       {
        "p": 6,
        "n": "Piastri",
        "sub": "McLaren",
-       "pts": 68,
-       "c": "#FF8000"
+       "pts": 68
       },
       {
        "p": 7,
        "n": "Verstappen",
        "sub": "Red Bull",
-       "pts": 55,
-       "c": "#3671C6"
+       "pts": 55
       },
       {
        "p": 8,
        "n": "Gasly",
-       "sub": "Alpine",
-       "pts": 41,
-       "c": "#00A1E8"
+       "sub": "Alpine F1 Team",
+       "pts": 41
       },
       {
        "p": 9,
        "n": "Hadjar",
        "sub": "Red Bull",
-       "pts": 34,
-       "c": "#3671C6"
+       "pts": 34
       },
       {
        "p": 10,
        "n": "Lawson",
-       "sub": "Racing Bulls",
-       "pts": null,
-       "c": "#6692FF"
+       "sub": "RB F1 Team",
+       "pts": 28
+      },
+      {
+       "p": 11,
+       "n": "Bearman",
+       "sub": "Haas F1 Team",
+       "pts": 18
+      },
+      {
+       "p": 12,
+       "n": "Colapinto",
+       "sub": "Alpine F1 Team",
+       "pts": 16
       }
      ]
     },
@@ -831,68 +1316,57 @@
       {
        "p": 1,
        "n": "Mercedes",
-       "pts": 262,
-       "c": "#00D7B6"
+       "pts": 262
       },
       {
        "p": 2,
        "n": "Ferrari",
-       "pts": 190,
-       "c": "#E8002D"
+       "pts": 190
       },
       {
        "p": 3,
        "n": "McLaren",
-       "pts": 141,
-       "c": "#FF8000"
+       "pts": 141
       },
       {
        "p": 4,
-       "n": "Red Bull Racing",
-       "pts": 89,
-       "c": "#3671C6"
+       "n": "Red Bull",
+       "pts": 89
       },
       {
        "p": 5,
-       "n": "Alpine",
-       "pts": 60,
-       "c": "#00A1E8"
+       "n": "Alpine F1 Team",
+       "pts": 57
       },
       {
        "p": 6,
-       "n": "Racing Bulls",
-       "pts": 38,
-       "c": "#6692FF"
+       "n": "RB F1 Team",
+       "pts": 41
       },
       {
        "p": 7,
-       "n": "Haas",
-       "pts": null,
-       "c": "#9CA3AF"
+       "n": "Haas F1 Team",
+       "pts": 21
       },
       {
        "p": 8,
        "n": "Williams",
-       "pts": null,
-       "c": "#37BEDD"
+       "pts": 11
       },
       {
        "p": 9,
        "n": "Audi",
-       "pts": null,
-       "c": "#B0B4B8"
+       "pts": 2
       },
       {
        "p": 10,
        "n": "Aston Martin",
-       "pts": null,
-       "c": "#229971"
+       "pts": 1
       },
       {
        "p": 11,
-       "n": "Cadillac",
-       "pts": null,
-       "c": "#C7A14E"
+       "n": "Cadillac F1 Team",
+       "pts": 0
       }
      ]
     }
