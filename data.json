@@ -1,5 +1,5 @@
 {
- "generated": "2026-07-04T08:05:18+00:00",
+ "generated": "2026-07-05T08:16:58+00:00",
  "source": "robot",
  "events": [
   {
@@ -1228,7 +1228,7 @@
  ],
  "standings": {
   "f1": {
-   "round": "après 8 manches · 8/22",
+   "round": "après 9 manches · 9/22",
    "last": {
     "r": "GP de Barcelone",
     "w": "Lewis Hamilton (Ferrari)"
@@ -1241,43 +1241,43 @@
        "p": 1,
        "n": "Antonelli",
        "sub": "Mercedes",
-       "pts": 171
+       "pts": 179
       },
       {
        "p": 2,
        "n": "Russell",
        "sub": "Mercedes",
-       "pts": 131
+       "pts": 136
       },
       {
        "p": 3,
        "n": "Hamilton",
        "sub": "Ferrari",
-       "pts": 125
+       "pts": 132
       },
       {
        "p": 4,
-       "n": "Piastri",
+       "n": "Norris",
        "sub": "McLaren",
-       "pts": 80
+       "pts": 85
       },
       {
        "p": 5,
-       "n": "Norris",
-       "sub": "McLaren",
-       "pts": 79
+       "n": "Leclerc",
+       "sub": "Ferrari",
+       "pts": 83
       },
       {
        "p": 6,
-       "n": "Leclerc",
-       "sub": "Ferrari",
-       "pts": 79
+       "n": "Piastri",
+       "sub": "McLaren",
+       "pts": 82
       },
       {
        "p": 7,
        "n": "Verstappen",
        "sub": "Red Bull",
-       "pts": 73
+       "pts": 76
       },
       {
        "p": 8,
@@ -1295,7 +1295,7 @@
        "p": 10,
        "n": "Lawson",
        "sub": "RB F1 Team",
-       "pts": 30
+       "pts": 31
       },
       {
        "p": 11,
@@ -1317,22 +1317,22 @@
       {
        "p": 1,
        "n": "Mercedes",
-       "pts": 302
+       "pts": 315
       },
       {
        "p": 2,
        "n": "Ferrari",
-       "pts": 204
+       "pts": 215
       },
       {
        "p": 3,
        "n": "McLaren",
-       "pts": 159
+       "pts": 167
       },
       {
        "p": 4,
        "n": "Red Bull",
-       "pts": 115
+       "pts": 118
       },
       {
        "p": 5,
@@ -1342,7 +1342,7 @@
       {
        "p": 6,
        "n": "RB F1 Team",
-       "pts": 44
+       "pts": 45
       },
       {
        "p": 7,
