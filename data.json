@@ -1,5 +1,5 @@
 {
- "generated": "2026-07-31T08:09:20+00:00",
+ "generated": "2026-08-01T07:37:49+00:00",
  "source": "robot",
  "events": [
   {
@@ -514,9 +514,42 @@
    "c": "Marina Bay",
    "co": "Singapour",
    "fl": "🇸🇬",
+   "a": "2026-10-02",
+   "b": "2026-10-04",
+   "r": "R16",
+   "sessions": [
+    {
+     "n": "Essais libres 1",
+     "t": "2026-10-02T02:00:00Z"
+    },
+    {
+     "n": "Essais libres 2",
+     "t": "2026-10-02T06:00:00Z"
+    },
+    {
+     "n": "Essais libres 3",
+     "t": "2026-10-03T06:00:00Z"
+    },
+    {
+     "n": "Qualifications",
+     "t": "2026-10-03T09:00:00Z"
+    },
+    {
+     "n": "Course",
+     "t": "2026-10-04T07:00:00Z",
+     "race": true
+    }
+   ]
+  },
+  {
+   "s": "f1",
+   "n": "GP des États-Unis",
+   "c": "COTA, Austin",
+   "co": "États-Unis",
+   "fl": "🇺🇸",
    "a": "2026-10-09",
    "b": "2026-10-11",
-   "r": "R16",
+   "r": "R17",
    "sessions": [
     {
      "n": "Essais libres 1",
@@ -543,13 +576,13 @@
   },
   {
    "s": "f1",
-   "n": "GP des États-Unis",
-   "c": "COTA, Austin",
-   "co": "États-Unis",
-   "fl": "🇺🇸",
+   "n": "GP de Mexico",
+   "c": "Mexico City",
+   "co": "Mexique",
+   "fl": "🇲🇽",
    "a": "2026-10-23",
    "b": "2026-10-25",
-   "r": "R17",
+   "r": "R18",
    "sessions": [
     {
      "n": "Essais libres 1",
@@ -576,13 +609,13 @@
   },
   {
    "s": "f1",
-   "n": "GP de Mexico",
-   "c": "Mexico City",
-   "co": "Mexique",
-   "fl": "🇲🇽",
+   "n": "GP de São Paulo",
+   "c": "Interlagos",
+   "co": "Brésil",
+   "fl": "🇧🇷",
    "a": "2026-10-30",
    "b": "2026-11-01",
-   "r": "R18",
+   "r": "R19",
    "sessions": [
     {
      "n": "Essais libres 1",
@@ -609,13 +642,13 @@
   },
   {
    "s": "f1",
-   "n": "GP de São Paulo",
-   "c": "Interlagos",
-   "co": "Brésil",
-   "fl": "🇧🇷",
+   "n": "GP de Las Vegas",
+   "c": "Las Vegas Strip",
+   "co": "États-Unis",
+   "fl": "🇺🇸",
    "a": "2026-11-06",
    "b": "2026-11-08",
-   "r": "R19",
+   "r": "R20",
    "sessions": [
     {
      "n": "Essais libres 1",
@@ -642,13 +675,13 @@
   },
   {
    "s": "f1",
-   "n": "GP de Las Vegas",
-   "c": "Las Vegas Strip",
-   "co": "États-Unis",
-   "fl": "🇺🇸",
+   "n": "GP du Qatar",
+   "c": "Lusail",
+   "co": "Qatar",
+   "fl": "🇶🇦",
    "a": "2026-11-20",
    "b": "2026-11-22",
-   "r": "R20",
+   "r": "R21",
    "sessions": [
     {
      "n": "Essais libres 1",
@@ -675,13 +708,13 @@
   },
   {
    "s": "f1",
-   "n": "GP du Qatar",
-   "c": "Lusail",
-   "co": "Qatar",
-   "fl": "🇶🇦",
+   "n": "GP d'Abu Dhabi",
+   "c": "Yas Marina",
+   "co": "Émirats A.U.",
+   "fl": "🇦🇪",
    "a": "2026-11-27",
    "b": "2026-11-29",
-   "r": "R21",
+   "r": "R22",
    "sessions": [
     {
      "n": "Essais libres 1",
@@ -702,39 +735,6 @@
     {
      "n": "Course",
      "t": "2026-11-29T16:00:00Z",
-     "race": true
-    }
-   ]
-  },
-  {
-   "s": "f1",
-   "n": "GP d'Abu Dhabi",
-   "c": "Yas Marina",
-   "co": "Émirats A.U.",
-   "fl": "🇦🇪",
-   "a": "2026-12-04",
-   "b": "2026-12-06",
-   "r": "R22",
-   "sessions": [
-    {
-     "n": "Essais libres 1",
-     "t": "2026-12-04T09:30:00Z"
-    },
-    {
-     "n": "Essais libres 2",
-     "t": "2026-12-04T13:00:00Z"
-    },
-    {
-     "n": "Essais libres 3",
-     "t": "2026-12-05T10:30:00Z"
-    },
-    {
-     "n": "Qualifications",
-     "t": "2026-12-05T14:00:00Z"
-    },
-    {
-     "n": "Course",
-     "t": "2026-12-06T13:00:00Z",
      "race": true
     }
    ]
