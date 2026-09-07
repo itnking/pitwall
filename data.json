@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-06T09:26:19+00:00",
+ "generated": "2026-09-07T10:18:33+00:00",
  "source": "robot",
  "events": [
   {
@@ -441,7 +441,8 @@
      "t": "2026-09-06T13:00:00Z",
      "race": true
     }
-   ]
+   ],
+   "w": "Antonelli"
   },
   {
    "s": "f1",
@@ -1245,25 +1246,25 @@
        "p": 1,
        "n": "Antonelli",
        "sub": "Mercedes",
-       "pts": 242
+       "pts": 267
       },
       {
        "p": 2,
        "n": "Russell",
        "sub": "Mercedes",
-       "pts": 183
+       "pts": 201
       },
       {
        "p": 3,
        "n": "Hamilton",
        "sub": "Ferrari",
-       "pts": 183
+       "pts": 191
       },
       {
        "p": 4,
        "n": "Norris",
        "sub": "McLaren",
-       "pts": 159
+       "pts": 171
       },
       {
        "p": 5,
@@ -1275,43 +1276,43 @@
        "p": 6,
        "n": "Verstappen",
        "sub": "Red Bull",
-       "pts": 112
+       "pts": 127
       },
       {
        "p": 7,
        "n": "Piastri",
        "sub": "McLaren",
-       "pts": 104
+       "pts": 116
       },
       {
        "p": 8,
        "n": "Hadjar",
        "sub": "Red Bull",
-       "pts": 68
+       "pts": 71
       },
       {
        "p": 9,
        "n": "Lawson",
        "sub": "RB F1 Team",
-       "pts": 49
+       "pts": 51
       },
       {
        "p": 10,
        "n": "Gasly",
        "sub": "Alpine F1 Team",
-       "pts": 44
+       "pts": 41
       },
       {
        "p": 11,
        "n": "Lindblad",
        "sub": "RB F1 Team",
-       "pts": 23
+       "pts": 29
       },
       {
        "p": 12,
        "n": "Colapinto",
        "sub": "Alpine F1 Team",
-       "pts": 19
+       "pts": 21
       }
      ]
     },
@@ -1321,32 +1322,32 @@
       {
        "p": 1,
        "n": "Mercedes",
-       "pts": 425
+       "pts": 468
       },
       {
        "p": 2,
        "n": "Ferrari",
-       "pts": 338
+       "pts": 346
       },
       {
        "p": 3,
        "n": "McLaren",
-       "pts": 263
+       "pts": 287
       },
       {
        "p": 4,
        "n": "Red Bull",
-       "pts": 186
+       "pts": 204
       },
       {
        "p": 5,
        "n": "RB F1 Team",
-       "pts": 66
+       "pts": 75
       },
       {
        "p": 6,
        "n": "Alpine F1 Team",
-       "pts": 63
+       "pts": 62
       },
       {
        "p": 7,
