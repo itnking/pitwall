@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-26T09:51:45+00:00",
+ "generated": "2026-09-27T10:33:14+00:00",
  "source": "robot",
  "events": [
   {
@@ -509,7 +509,8 @@
      "t": "2026-09-26T11:00:00Z",
      "race": true
     }
-   ]
+   ],
+   "w": "Russell"
   },
   {
    "s": "f1",
@@ -1247,19 +1248,19 @@
        "p": 1,
        "n": "Antonelli",
        "sub": "Mercedes",
-       "pts": 292
+       "pts": 302
       },
       {
        "p": 2,
        "n": "Russell",
        "sub": "Mercedes",
-       "pts": 211
+       "pts": 236
       },
       {
        "p": 3,
        "n": "Hamilton",
        "sub": "Ferrari",
-       "pts": 191
+       "pts": 199
       },
       {
        "p": 4,
@@ -1271,13 +1272,13 @@
        "p": 5,
        "n": "Leclerc",
        "sub": "Ferrari",
-       "pts": 167
+       "pts": 179
       },
       {
        "p": 6,
        "n": "Verstappen",
        "sub": "Red Bull",
-       "pts": 145
+       "pts": 163
       },
       {
        "p": 7,
@@ -1289,7 +1290,7 @@
        "p": 8,
        "n": "Hadjar",
        "sub": "Red Bull",
-       "pts": 71
+       "pts": 86
       },
       {
        "p": 9,
@@ -1307,7 +1308,7 @@
        "p": 11,
        "n": "Lindblad",
        "sub": "RB F1 Team",
-       "pts": 31
+       "pts": 37
       },
       {
        "p": 12,
@@ -1323,12 +1324,12 @@
       {
        "p": 1,
        "n": "Mercedes",
-       "pts": 503
+       "pts": 538
       },
       {
        "p": 2,
        "n": "Ferrari",
-       "pts": 358
+       "pts": 378
       },
       {
        "p": 3,
@@ -1338,12 +1339,12 @@
       {
        "p": 4,
        "n": "Red Bull",
-       "pts": 230
+       "pts": 263
       },
       {
        "p": 5,
        "n": "RB F1 Team",
-       "pts": 77
+       "pts": 83
       },
       {
        "p": 6,
@@ -1353,7 +1354,7 @@
       {
        "p": 7,
        "n": "Haas F1 Team",
-       "pts": 21
+       "pts": 27
       },
       {
        "p": 8,
@@ -1363,7 +1364,7 @@
       {
        "p": 9,
        "n": "Williams",
-       "pts": 11
+       "pts": 12
       },
       {
        "p": 10,
