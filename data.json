@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-10T11:10:48+00:00",
+ "generated": "2026-10-11T11:24:06+00:00",
  "source": "robot",
  "events": [
   {
@@ -1236,7 +1236,7 @@
  ],
  "standings": {
   "f1": {
-   "round": "après 16 manches · 16/22",
+   "round": "après 17 manches · 17/22",
    "last": {
     "r": "GP de Barcelone",
     "w": "Lewis Hamilton (Ferrari)"
@@ -1249,7 +1249,7 @@
        "p": 1,
        "n": "Antonelli",
        "sub": "Mercedes",
-       "pts": 320
+       "pts": 325
       },
       {
        "p": 2,
@@ -1261,25 +1261,25 @@
        "p": 3,
        "n": "Hamilton",
        "sub": "Ferrari",
-       "pts": 214
+       "pts": 221
       },
       {
        "p": 4,
        "n": "Leclerc",
        "sub": "Ferrari",
-       "pts": 191
+       "pts": 197
       },
       {
        "p": 5,
-       "n": "Norris",
-       "sub": "McLaren",
-       "pts": 188
+       "n": "Verstappen",
+       "sub": "Red Bull",
+       "pts": 196
       },
       {
        "p": 6,
-       "n": "Verstappen",
-       "sub": "Red Bull",
-       "pts": 188
+       "n": "Norris",
+       "sub": "McLaren",
+       "pts": 189
       },
       {
        "p": 7,
@@ -1297,7 +1297,7 @@
        "p": 9,
        "n": "Lawson",
        "sub": "RB F1 Team",
-       "pts": 65
+       "pts": 69
       },
       {
        "p": 10,
@@ -1325,27 +1325,27 @@
       {
        "p": 1,
        "n": "Mercedes",
-       "pts": 556
+       "pts": 561
       },
       {
        "p": 2,
        "n": "Ferrari",
-       "pts": 405
+       "pts": 418
       },
       {
        "p": 3,
        "n": "McLaren",
-       "pts": 316
+       "pts": 317
       },
       {
        "p": 4,
        "n": "Red Bull",
-       "pts": 298
+       "pts": 306
       },
       {
        "p": 5,
        "n": "RB F1 Team",
-       "pts": 90
+       "pts": 94
       },
       {
        "p": 6,
@@ -1355,12 +1355,12 @@
       {
        "p": 7,
        "n": "Haas F1 Team",
-       "pts": 27
+       "pts": 30
       },
       {
        "p": 8,
        "n": "Audi",
-       "pts": 17
+       "pts": 19
       },
       {
        "p": 9,
