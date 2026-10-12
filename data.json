@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-11T11:24:06+00:00",
+ "generated": "2026-10-12T13:09:48+00:00",
  "source": "robot",
  "events": [
   {
@@ -577,7 +577,8 @@
      "t": "2026-10-11T12:00:00Z",
      "race": true
     }
-   ]
+   ],
+   "w": "Verstappen"
   },
   {
    "s": "f1",
@@ -1249,55 +1250,55 @@
        "p": 1,
        "n": "Antonelli",
        "sub": "Mercedes",
-       "pts": 325
+       "pts": 340
       },
       {
        "p": 2,
        "n": "Russell",
        "sub": "Mercedes",
-       "pts": 236
+       "pts": 238
       },
       {
        "p": 3,
        "n": "Hamilton",
        "sub": "Ferrari",
-       "pts": 221
+       "pts": 229
       },
       {
        "p": 4,
-       "n": "Leclerc",
-       "sub": "Ferrari",
-       "pts": 197
+       "n": "Verstappen",
+       "sub": "Red Bull",
+       "pts": 221
       },
       {
        "p": 5,
-       "n": "Verstappen",
-       "sub": "Red Bull",
-       "pts": 196
+       "n": "Leclerc",
+       "sub": "Ferrari",
+       "pts": 215
       },
       {
        "p": 6,
        "n": "Norris",
        "sub": "McLaren",
-       "pts": 189
+       "pts": 201
       },
       {
        "p": 7,
        "n": "Piastri",
        "sub": "McLaren",
-       "pts": 128
+       "pts": 138
       },
       {
        "p": 8,
        "n": "Hadjar",
        "sub": "Red Bull",
-       "pts": 96
+       "pts": 97
       },
       {
        "p": 9,
        "n": "Lawson",
        "sub": "RB F1 Team",
-       "pts": 69
+       "pts": 75
       },
       {
        "p": 10,
@@ -1325,27 +1326,27 @@
       {
        "p": 1,
        "n": "Mercedes",
-       "pts": 561
+       "pts": 578
       },
       {
        "p": 2,
        "n": "Ferrari",
-       "pts": 418
+       "pts": 444
       },
       {
        "p": 3,
        "n": "McLaren",
-       "pts": 317
+       "pts": 339
       },
       {
        "p": 4,
        "n": "Red Bull",
-       "pts": 306
+       "pts": 332
       },
       {
        "p": 5,
        "n": "RB F1 Team",
-       "pts": 94
+       "pts": 100
       },
       {
        "p": 6,
@@ -1360,7 +1361,7 @@
       {
        "p": 8,
        "n": "Audi",
-       "pts": 19
+       "pts": 23
       },
       {
        "p": 9,
