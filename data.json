@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T13:29:25+00:00",
+ "generated": "2026-11-03T12:47:17+00:00",
  "source": "robot",
  "events": [
   {
@@ -1288,25 +1288,25 @@
        "p": 7,
        "n": "Piastri",
        "sub": "McLaren",
-       "pts": 150
+       "pts": 144
       },
       {
        "p": 8,
        "n": "Hadjar",
        "sub": "Red Bull",
-       "pts": 105
+       "pts": 107
       },
       {
        "p": 9,
        "n": "Lawson",
        "sub": "RB F1 Team",
-       "pts": 79
+       "pts": 83
       },
       {
        "p": 10,
        "n": "Gasly",
        "sub": "Alpine F1 Team",
-       "pts": 43
+       "pts": 42
       },
       {
        "p": 11,
@@ -1318,7 +1318,7 @@
        "p": 12,
        "n": "Colapinto",
        "sub": "Alpine F1 Team",
-       "pts": 31
+       "pts": 27
       }
      ]
     },
@@ -1338,32 +1338,32 @@
       {
        "p": 3,
        "n": "Red Bull",
-       "pts": 380
+       "pts": 382
       },
       {
        "p": 4,
        "n": "McLaren",
-       "pts": 371
+       "pts": 365
       },
       {
        "p": 5,
        "n": "RB F1 Team",
-       "pts": 104
+       "pts": 108
       },
       {
        "p": 6,
        "n": "Alpine F1 Team",
-       "pts": 74
+       "pts": 69
       },
       {
        "p": 7,
        "n": "Haas F1 Team",
-       "pts": 30
+       "pts": 31
       },
       {
        "p": 8,
        "n": "Audi",
-       "pts": 23
+       "pts": 27
       },
       {
        "p": 9,
